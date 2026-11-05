@@ -3,9 +3,8 @@ import { join, resolve } from "node:path";
 import { buildSite } from "meowpress/build";
 import site from "./site.config.ts";
 
-const siteDirectory = import.meta.dir;
-const repositoryRoot = resolve(siteDirectory, "..");
-const stagedContent = resolve(siteDirectory, "content");
+const repositoryRoot = import.meta.dir;
+const stagedContent = resolve(repositoryRoot, "content");
 
 async function copyMarkdownTree(from: string, to: string): Promise<void> {
   await mkdir(to, { recursive: true });

@@ -1,5 +1,5 @@
 {
-  "name": "@lidessen/blog-site",
+  "name": "@lidessen/readme",
   "private": true,
   "type": "module",
   "packageManager": "bun@1.4.4",
