@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "@lidessen/blog-site",
+      "name": "@lidessen/readme",
       "dependencies": {
         "meowcss": "0.3.0-alpha.2",
         "meowjsx": "0.3.0-alpha.1",

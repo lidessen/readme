@@ -1,13 +1,12 @@
 import { resolve } from "node:path";
 import { meowSite } from "meowpress/build";
 
-const siteDirectory = import.meta.dir;
-const repositoryRoot = resolve(siteDirectory, "..");
+const repositoryRoot = import.meta.dir;
 
 export default meowSite({
-  content: resolve(siteDirectory, "content"),
+  content: resolve(repositoryRoot, "content"),
   skillsDirectory: repositoryRoot,
-  outputDirectory: resolve(siteDirectory, "dist"),
+  outputDirectory: resolve(repositoryRoot, "dist"),
   site: {
     name: "Lidessen's land",
     id: "lidessen",
@@ -15,7 +14,7 @@ export default meowSite({
       "A mixed timeline of long-form posts and fragmentary thoughts about agents and software design.",
     skillsPackage: "lidessen/readme",
     repositorySourceUrl: "https://github.com/lidessen/readme/tree/main",
-    contentDirectory: "blog-site/content",
+    contentDirectory: "content",
     images: {
       hero: "images/hero-black-cat.png",
       feed: "images/feed-black-cat.png",
