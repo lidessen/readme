@@ -9,6 +9,20 @@
 - [notes/](notes/)：个人观察、短想法和有待探索的问题。
 - [blog/](blog/)：围绕 Agent 与软件设计的文章草稿及图片。以 `_` 开头的文章保留草稿状态。
 
+## 站点
+
+`blog-site/` 用 [meowpress](https://github.com/lidessen/meowland) 把上面的文章和短想法建成静态站点。构建时把 `blog/` 放进内容树的 `posts/`，把 `notes/` 放进 `thoughts/`，并带上 `blog/assets/` 里的图片。以 `_` 开头的文章仍是草稿，不会进输出。
+
+需要 [Bun](https://bun.sh) 1.4 或更高版本：
+
+```sh
+cd blog-site
+bun install
+bun run build
+```
+
+输出在 `blog-site/dist/`。当前锁定的包是 `meowpress@0.3.0-alpha.2`、`meowjsx@0.3.0-alpha.1`、`meowcss@0.3.0-alpha.2`。
+
 ## 安装
 
 ### 按任务选择技能
