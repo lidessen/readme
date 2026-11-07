@@ -11,5 +11,5 @@
     "skipLibCheck": true,
     "types": ["bun"]
   },
-  "include": ["build.ts", "site.config.ts"]
+  "include": ["build.ts", "site.config.ts", "scripts/**/*.ts"]
 }

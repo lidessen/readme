@@ -22,6 +22,12 @@ bun run build
 
 输出在 `dist/`。类型检查：`bun run typecheck`。当前锁定的包是 `meowpress@0.3.0-alpha.2`、`meowjsx@0.3.0-alpha.1`、`meowcss@0.3.0-alpha.2`。
 
+### 发布边界
+
+`meowpress` 默认也会读取项目里的 `.agents/skills/`。本站构建会在发现该目录（含符号链接）时中止，避免把本地技能一起公开。请从干净检出构建，仅发布已审核的根 `skills/`、文章和短想法；不要为部署删除自己正在使用的本地技能。
+
+Cloudflare 发布采用人工审核后的静态产物上传，不连接 Git 自动发布。每次发布先确认远端提交，使用锁定的 Bun 版本运行 `bun install --frozen-lockfile`、`bun run test`、`bun run typecheck` 和 `bun run build`，再审核完整 `dist/`。校验产物清单后只上传 `dist/` 的内容，不上传仓库根目录、`.agents/`、环境文件或源代码。内容或依赖更新后必须重新审核；一次审核不代表后续提交获准公开。
+
 ## 安装
 
 ### 按任务选择技能
