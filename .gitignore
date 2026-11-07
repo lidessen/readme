@@ -2,3 +2,10 @@ node_modules/
 dist/
 content/
 .generated/
+.cloudflare/
+.wrangler/
+.dev.vars*
+.env*
+
+!.dev.vars.example
+!.env.example

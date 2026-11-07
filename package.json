@@ -5,8 +5,11 @@
   "packageManager": "bun@1.4.4",
   "scripts": {
     "build": "bun build.ts",
-    "test": "bun test scripts/public-build.test.ts",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "test": "bun test scripts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "deploy": "bun run build:workers && cf deploy --prebuilt --no-provision",
+    "build:workers": "bun run build && cf build",
+    "check:workers": "cf deploy --prebuilt --dry-run --no-provision"
   },
   "dependencies": {
     "meowcss": "0.3.0-alpha.2",
@@ -15,6 +18,8 @@
   },
   "devDependencies": {
     "@types/bun": "1.4.2",
-    "typescript": "5.9.3"
+    "cf": "1.0.0-beta.28",
+    "typescript": "5.9.3",
+    "wrangler": "4.158.0"
   }
 }
