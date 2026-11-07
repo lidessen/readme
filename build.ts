@@ -1,6 +1,7 @@
 import { cp, mkdir, readdir, rm } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { buildSite } from "meowpress/build";
+import { assertPublicSkillsOnly } from "./scripts/public-build.ts";
 import site from "./site.config.ts";
 
 const repositoryRoot = import.meta.dir;
@@ -33,5 +34,6 @@ async function stageContent(): Promise<void> {
   });
 }
 
+await assertPublicSkillsOnly(repositoryRoot);
 await stageContent();
 await buildSite(site);
