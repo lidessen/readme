@@ -13,10 +13,10 @@
 
 仓库根目录的 meowpress 构建把上面的文章和短想法做成静态站点。内容仍写在 `blog/` 和 `notes/`；构建时把 `blog/` 放进内容树的 `posts/`，把 `notes/` 放进 `thoughts/`，并带上 `blog/assets/` 里的图片。以 `_` 开头的文章仍是草稿，不会进输出。
 
-需要 [Bun](https://bun.sh) 1.4 或更高版本：
+使用 `package.json` 锁定的 [Bun](https://bun.sh) 1.4.4。构建会拒绝其他版本：
 
 ```sh
-bun install
+bun install --frozen-lockfile
 bun run build
 ```
 
@@ -26,7 +26,23 @@ bun run build
 
 `meowpress` 默认也会读取项目里的 `.agents/skills/`。本站构建会在发现该目录（含符号链接）时中止，避免把本地技能一起公开。请从干净检出构建，仅发布已审核的根 `skills/`、文章和短想法；不要为部署删除自己正在使用的本地技能。
 
-Cloudflare 发布采用人工审核后的静态产物上传，不连接 Git 自动发布。每次发布先确认远端提交，使用锁定的 Bun 版本运行 `bun install --frozen-lockfile`、`bun run test`、`bun run typecheck` 和 `bun run build`，再审核完整 `dist/`。校验产物清单后只上传 `dist/` 的内容，不上传仓库根目录、`.agents/`、环境文件或源代码。内容或依赖更新后必须重新审核；一次审核不代表后续提交获准公开。
+每次发布先确认提交，运行测试、类型检查和构建，再审核完整 `dist/`。只发布 `dist/` 的内容，不上传仓库根目录、`.agents/`、环境文件或源代码。内容或依赖更新后必须重新审核；一次审核不代表后续提交获准公开。
+
+### Cloudflare Workers Static Assets
+
+部署工具还需要 Node.js 22.18 或更高版本。`cloudflare.config.ts` 定义纯静态站点，`wrangler.config.ts` 将资产目录限定为 `dist/`。没有应用 Worker、数据绑定或自动域名变更。
+
+```sh
+bun install --frozen-lockfile
+bun run test
+bun run typecheck
+bun run build:workers
+bun run check:workers
+```
+
+最后一步是部署预检，不上传文件，也不需要 Cloudflare 凭据。构建会生成独立的 `404.html`，并固定首页日期标签的标点，避免不同平台的 ICU 日期格式导致产物变化。
+
+审核通过后，使用已授权的 Cloudflare 登录运行 `bun run deploy`。自定义域名应在部署验证通过后单独配置。Git 自动构建需要另外在 Workers Builds 中连接仓库和配置构建凭据；提交这些配置文件本身不会开启自动发布。构建命令为 `bun install --frozen-lockfile && bun run test && bun run typecheck && bun run build:workers`，部署命令为 `npx cf deploy --prebuilt --no-provision`，构建环境的 `BUN_VERSION` 需设为 `1.4.4`。
 
 ## 安装
 

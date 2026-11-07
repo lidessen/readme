@@ -11,5 +11,11 @@
     "skipLibCheck": true,
     "types": ["bun"]
   },
-  "include": ["build.ts", "site.config.ts", "scripts/**/*.ts"]
+  "include": [
+    "build.ts",
+    "site.config.ts",
+    "scripts/**/*.ts",
+    "cloudflare.config.ts",
+    "wrangler.config.ts"
+  ]
 }

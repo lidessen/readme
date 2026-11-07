@@ -2,7 +2,12 @@ import { afterEach, expect, test } from "bun:test";
 import { mkdir, mkdtemp, rm, symlink } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { assertPublicSkillsOnly } from "./public-build.ts";
+import { assertBuildRuntime, assertPublicSkillsOnly } from "./public-build.ts";
+
+test("requires the pinned Bun runtime for repeatable output", () => {
+  expect(() => assertBuildRuntime("1.4.4", "bun@1.4.4")).not.toThrow();
+  expect(() => assertBuildRuntime("1.4.2", "bun@1.4.4")).toThrow("Build requires bun@1.4.4");
+});
 
 const directories: string[] = [];
 async function fixture(): Promise<string> {
