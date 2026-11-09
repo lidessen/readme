@@ -20,11 +20,11 @@ bun install --frozen-lockfile
 bun run build
 ```
 
-输出在 `dist/`。类型检查：`bun run typecheck`。当前锁定的包是 `meowpress@0.3.0-alpha.2`、`meowjsx@0.3.0-alpha.1`、`meowcss@0.3.0-alpha.2`。
+输出在 `dist/`。类型检查：`bun run typecheck`。当前锁定的包是 `meowpress@0.3.0-alpha.3`、`meowjsx@0.3.0-alpha.1`、`meowcss@0.3.0-alpha.2`。
 
 ### 发布边界
 
-`meowpress` 默认也会读取项目里的 `.agents/skills/`。本站构建会在发现该目录（含符号链接）时中止，避免把本地技能一起公开。请从干净检出构建，仅发布已审核的根 `skills/`、文章和短想法；不要为部署删除自己正在使用的本地技能。
+`meowpress@0.3.0-alpha.3` 默认不发布项目里的 `.agents/skills/`，本站也显式设置 `includeProjectSkills: false`。另外保留干净检出检查，在发现该目录（含符号链接）时中止构建，避免本地技能混入发布工作区。请从干净检出构建，仅发布已审核的根 `skills/`、文章和短想法；不要为部署删除自己正在使用的本地技能。
 
 每次发布先确认提交，运行测试、类型检查和构建，再审核完整 `dist/`。只发布 `dist/` 的内容，不上传仓库根目录、`.agents/`、环境文件或源代码。内容或依赖更新后必须重新审核；一次审核不代表后续提交获准公开。
 
@@ -40,7 +40,7 @@ bun run build:workers
 bun run check:workers
 ```
 
-最后一步是部署预检，不上传文件，也不需要 Cloudflare 凭据。构建会生成独立的 `404.html`，并固定首页日期标签的标点，避免不同平台的 ICU 日期格式导致产物变化。
+最后一步是部署预检，不上传文件，也不需要 Cloudflare 凭据。新版 Meowpress 原生生成带站点主题的 `404.html`，并固定首页日期标签的格式；本站保留中文错误提示，不再另行覆盖错误页或修改生成的日期 HTML。
 
 审核通过后，使用已授权的 Cloudflare 登录运行 `bun run deploy`。自定义域名应在部署验证通过后单独配置。Git 自动构建需要另外在 Workers Builds 中连接仓库和配置构建凭据；提交这些配置文件本身不会开启自动发布。构建命令为 `bun install --frozen-lockfile && bun run test && bun run typecheck && bun run build:workers`，部署命令为 `npx cf deploy --prebuilt --no-provision`，构建环境的 `BUN_VERSION` 需设为 `1.4.4`。
 
