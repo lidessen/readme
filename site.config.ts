@@ -6,6 +6,12 @@ const repositoryRoot = import.meta.dir;
 export default meowSite({
   content: resolve(repositoryRoot, "content"),
   skillsDirectory: repositoryRoot,
+  includeProjectSkills: false,
+  notFound: {
+    title: "页面未找到",
+    message: "页面未找到。",
+    homeLabel: "返回首页",
+  },
   outputDirectory: resolve(repositoryRoot, "dist"),
   site: {
     name: "Lidessen's land",

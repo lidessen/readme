@@ -7,7 +7,7 @@
       "dependencies": {
         "meowcss": "0.3.0-alpha.2",
         "meowjsx": "0.3.0-alpha.1",
-        "meowpress": "0.3.0-alpha.2",
+        "meowpress": "0.3.0-alpha.3",
       },
       "devDependencies": {
         "@types/bun": "1.4.2",
@@ -324,7 +324,7 @@
 
     "meowjsx": ["meowjsx@0.3.0-alpha.1", "", {}, "sha512-reigvE0VNvyEytv6C0VpTqx/eC4kXlNZryOOaxaQxw8vnvSCIpD3fNMd2S6fEVX59lI9Ny0Kqig3HkES+F98uA=="],
 
-    "meowpress": ["meowpress@0.3.0-alpha.2", "", { "dependencies": { "@dagrejs/dagre": "^3.1.1", "@fontsource-variable/geist": "^5.3.0", "@mdx-js/mdx": "^3.1.1", "mdast-util-from-markdown": "^2.0.3", "remark-gfm": "^4.0.1", "yaml": "^2.9.0" }, "peerDependencies": { "meowcss": "^0.3.0-alpha.1", "meowjsx": "^0.3.0-alpha.0" }, "bin": { "meowpress": "dist/src/cli.js" } }, "sha512-agXNWMIqMNxcngZkZbtHnyok2Lhh+I9Gm1PbMqw4GKwoPDvotUBbW+89x1Ip1B45SBKjIOd/rI010aYNhFKb/g=="],
+    "meowpress": ["meowpress@0.3.0-alpha.3", "", { "dependencies": { "@dagrejs/dagre": "^3.1.1", "@fontsource-variable/geist": "^5.3.0", "@mdx-js/mdx": "^3.1.1", "mdast-util-from-markdown": "^2.0.3", "remark-gfm": "^4.0.1", "yaml": "^2.9.0" }, "peerDependencies": { "meowcss": "^0.3.0-alpha.1", "meowjsx": "^0.3.0-alpha.0" }, "bin": { "meowpress": "dist/src/cli.js" } }, "sha512-Ip6yKaFPXVZqYXmX/SjOGcIgrH6A56htHi6Jj2NgN4rnSTmakNNP8THbqw1zL0PGhJBi8YzTtRA9a273iWn6Rg=="],
 
     "micromark": ["micromark@4.0.3", "", { "dependencies": { "@types/debug": "^4.0.0", "debug": "^4.0.0", "decode-named-character-reference": "^1.0.0", "devlop": "^1.0.0", "micromark-core-commonmark": "^2.0.0", "micromark-factory-space": "^2.0.0", "micromark-util-character": "^2.0.0", "micromark-util-chunked": "^2.0.0", "micromark-util-combine-extensions": "^2.0.0", "micromark-util-decode-numeric-character-reference": "^2.0.0", "micromark-util-edit-map": "^1.0.0", "micromark-util-encode": "^2.0.0", "micromark-util-normalize-identifier": "^2.0.0", "micromark-util-resolve-all": "^2.0.0", "micromark-util-sanitize-uri": "^2.0.0", "micromark-util-subtokenize": "^2.0.0", "micromark-util-symbol": "^2.0.0", "micromark-util-types": "^2.0.0" } }, "sha512-oGYfQzHSG5dOMovQcJ3fyTmZlWAWpi0XA0sJwJs+i6OT88o1+Jtw/8z0CmdowSLxGhhFK89rQ/oXph/wN02PNw=="],
 

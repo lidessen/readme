@@ -2,8 +2,6 @@ import { cp, mkdir, readdir, rm } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { buildSite } from "meowpress/build";
 import { assertBuildRuntime, assertPublicSkillsOnly } from "./scripts/public-build.ts";
-import { writeNotFoundPage } from "./scripts/not-found.ts";
-import { stabilizeHomeDates } from "./scripts/stable-dates.ts";
 import site from "./site.config.ts";
 
 const repositoryRoot = import.meta.dir;
@@ -41,5 +39,3 @@ assertBuildRuntime(Bun.version, packageMetadata.packageManager);
 await assertPublicSkillsOnly(repositoryRoot);
 await stageContent();
 await buildSite(site);
-await stabilizeHomeDates(resolve(repositoryRoot, "dist"));
-await writeNotFoundPage(resolve(repositoryRoot, "dist"));

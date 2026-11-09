@@ -7,7 +7,7 @@ export function assertBuildRuntime(actualVersion: string, packageManager: string
   }
 }
 
-/** meowpress discovers both skills/ and .agents/skills/ by default. */
+/** Require a clean public-build checkout in addition to includeProjectSkills: false. */
 export async function assertPublicSkillsOnly(repositoryRoot: string): Promise<void> {
   const privateSkills = resolve(repositoryRoot, ".agents/skills");
   try {
@@ -17,7 +17,7 @@ export async function assertPublicSkillsOnly(repositoryRoot: string): Promise<vo
     throw error;
   }
   throw new Error(
-    "Refusing to build: .agents/skills exists and meowpress would publish it. " +
+    "Refusing to build: .agents/skills is not allowed in a public-build checkout. " +
       "Build from a clean checkout containing only the reviewed public skills/ tree.",
   );
 }
