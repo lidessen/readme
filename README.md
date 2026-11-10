@@ -42,7 +42,23 @@ bun run check:workers
 
 最后一步是部署预检，不上传文件，也不需要 Cloudflare 凭据。新版 Meowpress 原生生成带站点主题的 `404.html`，并固定首页日期标签的格式；本站保留中文错误提示，不再另行覆盖错误页或修改生成的日期 HTML。
 
-审核通过后，使用已授权的 Cloudflare 登录运行 `bun run deploy`。自定义域名应在部署验证通过后单独配置。Git 自动构建需要另外在 Workers Builds 中连接仓库和配置构建凭据；提交这些配置文件本身不会开启自动发布。构建命令为 `bun install --frozen-lockfile && bun run test && bun run typecheck && bun run build:workers`，部署命令为 `npx cf deploy --prebuilt --no-provision`，构建环境的 `BUN_VERSION` 需设为 `1.4.4`。
+审核通过后，使用已授权的 Cloudflare 登录运行 `bun run deploy`。自定义域名在部署验证后单独配置，不由构建更改。
+
+#### Git 自动发布
+
+使用 Cloudflare Workers Builds，生产分支只监听 `main`，关闭其他分支和 PR 的预览发布。合并到 `main` 就代表批准公开该提交的站点内容；内容、依赖与构建脚本应在合并前审查。自动检查不能代替内容审核。
+
+- 构建命令：`bun install --frozen-lockfile --ignore-scripts && bun run build:ci`
+- 部署命令：`bun run deploy:ci`
+- 根目录：`/`；构建缓存：关闭。
+- 构建变量：`BUN_VERSION=1.4.4`、`NODE_VERSION=26.12.0`、`SKIP_DEPENDENCY_INSTALL=1`、`CF_SEND_TELEMETRY=false`、`CLOUDFLARE_ACCOUNT_ID=dd50f62e0b7df1f35fcb6b661873e132`。
+- 发布 token 只授予目标账户的 Workers Scripts Edit；不要使用默认宽权限模板，不授予 KV、R2、DNS 或 Workers Routes。token 只存入 Cloudflare 的构建凭据管理，不放进 Git、命令参数或构建日志。若平台支持并已验证单个 Worker 权限，应进一步收窄到 `lidessen-readme`。
+
+`build:ci` 依次运行测试、类型检查、静态构建、产物检查和无凭据 dry-run。产物检查确认只有 `lidessen-readme` 的静态资产，无应用模块、数据绑定或路由变更；逐个比较上传目录与 `dist/` 字节，拒绝符号链接、草稿路径、环境文件、源代码、source map 和常见凭据模式，并在构建日志输出 SHA-256 清单。
+
+`deploy:ci` 只允许 Workers Builds 的 `main` 构建，核对构建提交与 Git HEAD 一致，再次检查相同产物后以 `--prebuilt --no-provision` 发布，版本说明记录提交 SHA。构建或审核失败会中止发布，线上保留上次成功版本。
+
+启用前先将本 PR 中的 Workers 配置和上述命令合入 `main`，确认它包含当前站点版本；不要对旧 `main` 使用默认部署命令，也不要把准备分支设为生产分支来代替合并。然后连接仓库、保存已核实权限的构建 token，并配置以上参数。提交这些文件本身不会创建 Cloudflare 触发器或启用自动发布。首次运行后还需核对构建 SHA、部署版本、正式域名正常页面及私有/草稿路径的 404。
 
 ## 安装
 
