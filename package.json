@@ -9,7 +9,10 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "deploy": "bun run build:workers && cf deploy --prebuilt --no-provision",
     "build:workers": "bun run build && cf build",
-    "check:workers": "cf deploy --prebuilt --dry-run --no-provision"
+    "check:workers": "cf deploy --prebuilt --dry-run --no-provision",
+    "audit:workers": "bun scripts/ci-release.ts audit",
+    "build:ci": "bun run test && bun run typecheck && bun run build:workers && bun run audit:workers && bun run check:workers",
+    "deploy:ci": "bun scripts/ci-release.ts guard && bun run audit:workers && cf deploy --prebuilt --no-provision --message \"$WORKERS_CI_COMMIT_SHA\""
   },
   "dependencies": {
     "meowcss": "0.3.0-alpha.2",
