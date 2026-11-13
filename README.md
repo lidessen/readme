@@ -4,7 +4,7 @@
 
 ## 内容
 
-- [skills/](skills/)：可安装的技能，每个目录以 `SKILL.md` 为入口，包含方法说明和必要资源。
+- [skills/](skills/)：可安装的技能，每个目录以 `SKILL.md` 为入口，包含方法说明和必要资源。其中 `workcells-development-loop` 对应的工具仍在改造中、当前不可用，暂不列入安装推荐。
 - [theory/](theory/README.md)：理论原文与方法摘编，涉及表达、信息管理、技能方法和结构整理。
 - [notes/](notes/)：个人观察、短想法和有待探索的问题。
 - [blog/](blog/)：围绕 Agent 与软件设计的文章草稿及图片。以 `_` 开头的文章保留草稿状态。
@@ -76,6 +76,8 @@ bun run check:workers
 | 在 Herdr + Magpie 中委托任务并选择模型通道 | [task-delegation](skills/task-delegation/SKILL.md) |
 | 设计测试、选择投入或接续复测 | [risk-driven-testing](skills/risk-driven-testing/SKILL.md) |
 | 整理结构或评估依赖升级 | [defrag](skills/defrag/SKILL.md)、[dependency-upgrade](skills/dependency-upgrade/SKILL.md) |
+| 在 Docker 中运行 Bun | [docker-bun](skills/docker-bun/SKILL.md) |
+| 评估计划续费与配额价值 | [plan-value-analysis](skills/plan-value-analysis/SKILL.md) |
 | 界面设计与改进 | [interface-design](skills/interface-design/SKILL.md)、[ui-improvement](skills/ui-improvement/SKILL.md) |
 | 撰写项目文档 | [doc-writing](skills/doc-writing/SKILL.md) |
 | 调研材料与想法 | [research-synthesis](skills/research-synthesis/SKILL.md) |
@@ -88,12 +90,12 @@ Pack 提供分组浏览和安装入口，成员与仓库源码分别维护：
 
 | Pack | 技能数 | 包含的技能 |
 | --- | ---: | --- |
-| [lidessen](https://skills.sh/p/VwNOI0FZ0EAGV7Hy) | 15 | 以下各组去重后的全部技能 |
+| [lidessen](https://skills.sh/p/VwNOI0FZ0EAGV7Hy) | 19 | 以下各组去重后的全部技能 |
 | [agent](https://skills.sh/p/djYQ0UTttmOpfna4) | 4 | [skill-incubator](skills/skill-incubator/SKILL.md)、[agent-guidance](skills/agent-guidance/SKILL.md)、[agent-personality](skills/agent-personality/SKILL.md)、[divide-and-conquer](skills/divide-and-conquer/SKILL.md) |
-| [development](https://skills.sh/p/SazSJU8yDLRSqIF5) | 11 | [architecture](skills/architecture/SKILL.md)、[assurance-review](skills/assurance-review/SKILL.md)、[concept-naming](skills/concept-naming/SKILL.md)、[defrag](skills/defrag/SKILL.md)、[design-forge](skills/design-forge/SKILL.md)、[design-steward](skills/design-steward/SKILL.md)、[doc-writing](skills/doc-writing/SKILL.md)、[interface-design](skills/interface-design/SKILL.md)、[oneshot](skills/oneshot/SKILL.md)、[ui-improvement](skills/ui-improvement/SKILL.md)、[research-synthesis](skills/research-synthesis/SKILL.md) |
-| [workflow](https://skills.sh/p/id3m9AGDJSzskEsP) | 1 | [research-synthesis](skills/research-synthesis/SKILL.md) |
+| [development](https://skills.sh/p/SazSJU8yDLRSqIF5) | 13 | [architecture](skills/architecture/SKILL.md)、[assurance-review](skills/assurance-review/SKILL.md)、[concept-naming](skills/concept-naming/SKILL.md)、[defrag](skills/defrag/SKILL.md)、[design-forge](skills/design-forge/SKILL.md)、[design-steward](skills/design-steward/SKILL.md)、[doc-writing](skills/doc-writing/SKILL.md)、[interface-design](skills/interface-design/SKILL.md)、[ui-improvement](skills/ui-improvement/SKILL.md)、[oneshot](skills/oneshot/SKILL.md)、[risk-driven-testing](skills/risk-driven-testing/SKILL.md)、[docker-bun](skills/docker-bun/SKILL.md)、[dependency-upgrade](skills/dependency-upgrade/SKILL.md) |
+| [workflow](https://skills.sh/p/id3m9AGDJSzskEsP) | 2 | [research-synthesis](skills/research-synthesis/SKILL.md)、[plan-value-analysis](skills/plan-value-analysis/SKILL.md) |
 
-Pack 可以交叉包含技能。例如 `research-synthesis` 同时属于 `development` 和 `workflow`，两处使用同一份技能源码；项目按任务选择所需技能即可。
+Pack 的成员按 [`skills.sh.json`](skills.sh.json) 的分组定义，各组可以交叉包含同一技能，同一份技能源码不因分组重复；GitHub 安装不受分组限制，项目按任务选择所需技能即可。线上 Pack 的成员可能滞后于源码（如缺少后加技能），以上表为准。
 
 Pack 的完整安装尚未通过验收，已有验证副本未完整取得部分技能的引用文件和脚本。完整验证前，项目安装请继续使用下面的 GitHub 直接安装命令。
 

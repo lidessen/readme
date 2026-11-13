@@ -26,6 +26,7 @@
         "oneshot",
         "ui-improvement",
         "risk-driven-testing",
+        "docker-bun",
         "dependency-upgrade"
       ]
     },

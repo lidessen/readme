@@ -40,7 +40,8 @@ ncu --workspaces --target latest --jsonUpgraded --no-upgrade --no-interactive --
 联网或写缓存。只读任务优先在可信项目的只读副本或只读挂载中查询，工具缓存另置临时位置；
 先核对配置和执行环境，不把“查询”当作天然无副作用。工具缺失时按任务授权选择已有执行器、
 隔离运行或安装，不为一次查询悄悄新增项目依赖。
-私有源沿用授权配置，不切源或输出凭据。
+需要 Docker/Bun 时可用 [docker-bun](https://github.com/lidessen/skills/blob/main/skills/docker-bun/SKILL.md) 的运行原则，但其可写挂载
+脚本不是只读查询工具；只读检查需另设只读挂载。私有源沿用授权配置，不切源或输出凭据。
 
 NCU 候选表示**声明范围**可怎样改，不等于 lockfile 的实际版本，也不覆盖全部传递依赖。
 核对项目锁文件与已安装/解析结果；同一依赖跨 workspace 出现时合并升级决定，保留各路径。

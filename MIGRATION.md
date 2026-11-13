@@ -3,7 +3,7 @@
 通用技能、短想法和文章主要来自 Lidessen 自有 Rossovia 工程，原始来源版本为
 `0ce3ef5c8c99893d64c3cd94df5fc4eac822c9de`。以下源路径均相对于其所属仓库。
 
-## 通用方法
+## 通用方法与环境材料
 
 `meow-design` 更名为 `interface-design`，职责是界面的视觉层级、比例、排版和交互打磨，
 不承担软件架构评审。名称、Frontmatter 和活动引用随之调整，Meowland 专属上下文留在项目。
@@ -16,6 +16,7 @@
 | `risk-driven-testing` | 来自 `skills/risk-driven-testing/`；`.agents/skills/test-cycle/SKILL.md` 的复测与中断续接方法归入按需参考，去掉固定记录目录和产品方法依赖。 |
 | `dependency-upgrade` | 来自 `.agents/skills/dependency-upgrade/SKILL.md`；保留版本、模块关系和升级验证方法，目标项目的版本策略优先，不沿用固定路径或历史工具版本保证。 |
 | `agent-guidance` 现场评估参考 | 来自 `.agents/skills/agent-eval/references/field-trial.md`；保留答案隔离、真实入口及程序状态与业务评价分离，产品链路、运行标识和认知研究历史留在 Rossovia。 |
+| Bun/Docker 材料 | `docker-bun` 目录来自 `.agents/skills/docker-bun/`；项目路径和镜像改为调用参数，去除固定工作目录与历史镜像约定，源项目的运行观察不作跨项目保证。 |
 
 技能自身资源使用相对路径，可选的跨技能引用使用公共仓库链接，便于按需单独使用。
 来源文献与第三方引用保留在各文件中。
