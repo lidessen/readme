@@ -20,13 +20,13 @@ bun install --frozen-lockfile
 bun run build
 ```
 
-输出在 `dist/`。类型检查：`bun run typecheck`。当前锁定的包是 `meowpress@0.3.0-alpha.7`、`meowjsx@0.3.0-alpha.2`、`meowcss@0.3.0-alpha.2`。
+输出在 `dist/`。类型检查：`bun run typecheck`。当前锁定的包是 `meowpress@0.3.0-alpha.8`、`meowjsx@0.3.0-alpha.2`、`meowcss@0.3.0-alpha.2`。
 
 内置 Blog 已使用 Meowtail Journal 的真实页面、条目和正文组件。Newsreader、Inter、JetBrains Mono 字体及许可证随静态产物本地发布；内容、地址、筛选和技能浏览功能保持不变。
 
 ### 语言
 
-站点以中文为源语言，英文版发布在 `/en/`，页头有语言切换。英文树有自己的首页、归档、关于页和 404；没有英文译文的原文会在英文列表里标注语言，并链接到中文原页。技能页只在中文源树发布一次。
+站点以中文为源语言，英文版发布在 `/en/`，页头有语言切换。英文树有自己的首页、归档、关于页和 404；没有英文译文的原文会在英文列表里标注语言，并链接到中文原页。技能页在每个语言树都发布：界面文案跟着语言切换，技能正文是仓库素材、不翻译，用 frontmatter 里声明的 `lang` 标出它的语言。
 
 界面文案在 `locales/zh.json`，按主题里的英文原句对应；站点自有文案（站名、描述、关于页、404）的英文翻译在 `locales/en.json`，按 `site.config.ts` 里写的中文原文对应。内容翻译是 `notes/` 里的同名 `.en.md` 副本，frontmatter 里的 `translation.source` 记录它是从哪一版原文译出的哈希。
 
@@ -44,7 +44,7 @@ bunx --no-install meowpress locales --json             # 同样内容，给 Agen
 
 ### 发布边界
 
-`meowpress@0.3.0-alpha.7` 默认不发布项目里的 `.agents/skills/`，本站也显式设置 `includeProjectSkills: false`。另外保留干净检出检查，在发现该目录（含符号链接）时中止构建，避免本地技能混入发布工作区。请从干净检出构建，仅发布已审核的根 `skills/`、文章和短想法；不要为部署删除自己正在使用的本地技能。
+`meowpress@0.3.0-alpha.8` 默认不发布项目里的 `.agents/skills/`，本站也显式设置 `includeProjectSkills: false`。另外保留干净检出检查，在发现该目录（含符号链接）时中止构建，避免本地技能混入发布工作区。请从干净检出构建，仅发布已审核的根 `skills/`、文章和短想法；不要为部署删除自己正在使用的本地技能。
 
 每次发布先确认提交，运行测试、类型检查和构建，再审核完整 `dist/`。只发布 `dist/` 的内容，不上传仓库根目录、`.agents/`、环境文件或源代码。内容或依赖更新后必须重新审核；一次审核不代表后续提交获准公开。
 
