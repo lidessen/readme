@@ -7,6 +7,11 @@ export default meowSite({
   content: resolve(repositoryRoot, "content"),
   skillsDirectory: repositoryRoot,
   includeProjectSkills: false,
+  // Chinese is what the site and its content are written in; English is published under /en/.
+  locales: {
+    source: "zh",
+    targets: { en: { label: "English" } },
+  },
   notFound: {
     title: "页面未找到",
     message: "页面未找到。",
@@ -16,8 +21,8 @@ export default meowSite({
   site: {
     name: "Lidessen's land",
     id: "lidessen",
-    description:
-      "A mixed timeline of long-form posts and fragmentary thoughts about agents and software design.",
+    description: "一个混排长文和碎片想法的站点，主题多半是 Agent、软件设计和这些方法。",
+    url: "https://lidessen.com",
     skillsPackage: "lidessen/readme",
     repositorySourceUrl: "https://github.com/lidessen/readme/tree/main",
     contentDirectory: "content",
@@ -31,7 +36,7 @@ export default meowSite({
         "这里放长一点的文章和短一点的想法，主题多半是 Agent、软件设计和旁边那些方法。",
         "技能按任务选来用就行，和这个仓库公开的方法是同一套。",
       ],
-      linksHeading: "Find me",
+      linksHeading: "找到我",
       links: [
         {
           label: "GitHub",

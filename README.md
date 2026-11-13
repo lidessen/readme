@@ -24,6 +24,24 @@ bun run build
 
 内置 Blog 已使用 Meowtail Journal 的真实页面、条目和正文组件。Newsreader、Inter、JetBrains Mono 字体及许可证随静态产物本地发布；内容、地址、筛选和技能浏览功能保持不变。
 
+### 语言
+
+站点以中文为源语言，英文版发布在 `/en/`，页头有语言切换。英文树有自己的首页、归档、关于页和 404；没有英文译文的原文会在英文列表里标注语言，并链接到中文原页。技能页只在中文源树发布一次。
+
+界面文案在 `locales/zh.json`，按主题里的英文原句对应；站点自有文案（站名、描述、关于页、404）的英文翻译在 `locales/en.json`，按 `site.config.ts` 里写的中文原文对应。内容翻译是 `notes/` 里的同名 `.en.md` 副本，frontmatter 里的 `translation.source` 记录它是从哪一版原文译出的哈希。
+
+改过原文或写完译文后，用工作清单补齐并重新 stamp。构建会把 `notes/` 复制到内容树，所以 stamp 作用在 `content/thoughts/` 下的副本上，完成后把该文件复制回 `notes/`：
+
+```sh
+bun run build                                          # 先复制内容树，缺失和过期的译文会列出来
+bunx --no-install meowpress locales                    # 每行一条：缺什么译文、哪条过期
+bunx --no-install meowpress locales stamp content/thoughts/xxx.en.md
+cp content/thoughts/xxx.en.md notes/xxx.en.md          # 把记录下来的哈希写回源文件
+bunx --no-install meowpress locales --json             # 同样内容，给 Agent 读的清单
+```
+
+清单清空后再构建。`dist/translations.json` 是同一份报告，发布后也可以直接读。
+
 ### 发布边界
 
 `meowpress@0.3.0-alpha.6` 默认不发布项目里的 `.agents/skills/`，本站也显式设置 `includeProjectSkills: false`。另外保留干净检出检查，在发现该目录（含符号链接）时中止构建，避免本地技能混入发布工作区。请从干净检出构建，仅发布已审核的根 `skills/`、文章和短想法；不要为部署删除自己正在使用的本地技能。

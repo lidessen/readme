@@ -27,16 +27,27 @@ test("builds a themed 404 and stable dates without publishing drafts or project 
     }));
     const files = await readdir(output, { recursive: true });
     const home = await readFile(join(output, "index.html"), "utf8");
+    const englishHome = await readFile(join(output, "en/index.html"), "utf8");
     const notFound = await readFile(join(output, "404.html"), "utf8");
+    const englishNotFound = await readFile(join(output, "en/404.html"), "utf8");
     expect(home).toContain("PUBLIC_NOTE_FIXTURE");
-    expect(home).toContain("2026 Thu");
-    expect(home).not.toContain("2026, Thu");
+    expect(home).toContain("2026 周四");
+    expect(home).not.toContain("2026, 周四");
     expect(files).toContain("skills/public-example/index.html");
     expect(files.some((path) => /private-example|_draft/.test(path))).toBe(false);
     expect(notFound).toContain("页面未找到");
     expect(notFound).toContain("返回首页");
     expect(notFound).toMatch(/<base href=["']?\/["']?>/);
     expect(notFound).toMatch(/<link[^>]+stylesheet/);
+    // Chinese source tree with an English tree: the switch links across, the English tree has
+    // its own chrome, and an original without a translation is listed with its language marked.
+    expect(home).toContain('href="/en/"');
+    expect(englishHome).toContain("2026 Thu");
+    expect(englishHome).toContain('lang="zh"');
+    expect(englishNotFound).toContain("Page not found");
+    expect(englishNotFound).toContain("Back to home");
+    expect(files).toContain("en/thoughts/index.html");
+    expect(files).toContain("translations.json");
     for (const path of files.filter((path) => /\.(html|txt|md)$/.test(path))) {
       const text = await readFile(join(output, path), "utf8");
       expect(text).not.toContain("DRAFT_FIXTURE_DO_NOT_PUBLISH");
