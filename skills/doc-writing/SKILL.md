@@ -3,8 +3,8 @@ name: doc-writing
 description: 撰写、修订或翻译中英文项目文档（README、使用指南、设计文档 / RFC、模块说明）。先从维护者那里拿到事实、读者和取舍，再把这些材料写成读者读起来省力的文档：先定轻重，每句从读者已有的东西出发，抽象的话后面跟着后果和例子。用于新写、改写、翻译和去除文档中的 AI 味；不用于博客文章、营销文案或从源码生成 API 参考。
 metadata:
   short-description: Write docs that read like a maintainer wrote them
+  lang: zh
 ---
-
 # Doc Writing
 
 这个 skill 做两件事。先从维护者那里拿到只有他们才有的材料：事实、读者是谁、取舍的立场。

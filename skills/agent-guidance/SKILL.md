@@ -3,8 +3,8 @@ name: agent-guidance
 description: Decide whether an Agent method belongs in a skill, prompt, or other guidance carrier; review formation, splitting, merging, expression, discovery, and activation. Use for guidance design and refinement; developing uncertain methods through theory and experiments uses skill-incubator, not ordinary task execution or runtime guarantees.
 metadata:
   short-description: Design and review Agent guidance
+  lang: zh
 ---
-
 # Agent Guidance
 
 这个 skill 处理“Agent guidance 是否是正确的表达与载体”：让已经有来源边界的任务、方法或

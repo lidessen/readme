@@ -1,8 +1,9 @@
 ---
 name: divide-and-conquer
 description: 用 sub-agent 或 swarm 分治执行大体量任务，在有界并行中保持共同目标、覆盖范围与整体验收。用于跨模块检查、批量实现或多路调查；简单任务、强串行依赖或仅需并行工具调用时不必组建 Agent 团队。
+metadata:
+  lang: zh
 ---
-
 # Divide and Conquer
 
 分出去的是可独立完成的贡献，主 Agent 继续对整体结果负责。拆分时就说明结果怎样合起来

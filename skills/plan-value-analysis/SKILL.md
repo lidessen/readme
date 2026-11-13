@@ -3,8 +3,8 @@ name: plan-value-analysis
 description: 估计当前在售 AI coding/token 订阅各档的官方 API 等值与标价倍率，纳入当期 flex、bonus 和促销权益并展示区间。用于跨厂商或同产品套餐性价比排名；不同模型的金额不代表能力相同。
 metadata:
   short-description: 当前套餐 API 等值估计
+  lang: zh
 ---
-
 # Plan Value Analysis · 套餐性价比
 
 估计**查询时仍在售**的每档套餐，当期总权益能替代多少同模型官方 API 花费，以及相对网页公示订阅价的倍率。API 等值是替代成本，不是现金返还或模型能力分数。所有月度换算、倍率和排序交给 `scripts/analyze.py`，不要心算补齐未知值。

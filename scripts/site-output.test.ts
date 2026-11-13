@@ -48,6 +48,12 @@ test("builds a themed 404 and stable dates without publishing drafts or project 
     expect(englishNotFound).toContain("Back to home");
     expect(files).toContain("en/thoughts/index.html");
     expect(files).toContain("translations.json");
+    // The English tree publishes the skills section with its own chrome and links inside it.
+    expect(files).toContain("en/skills/index.html");
+    expect(files).toContain("en/skills/public-example/index.html");
+    const englishSkills = await readFile(join(output, "en/skills/index.html"), "utf8");
+    expect(englishSkills).toContain('href="/en/skills/public-example/"');
+    expect(englishSkills).not.toContain('href="/skills/public-example/"');
     for (const path of files.filter((path) => /\.(html|txt|md)$/.test(path))) {
       const text = await readFile(join(output, path), "utf8");
       expect(text).not.toContain("DRAFT_FIXTURE_DO_NOT_PUBLISH");

@@ -1,8 +1,9 @@
 ---
 name: interface-design
 description: Design, refine, or critique product interfaces and interactions, judging visual craft and whether each screen, element, and flow serves a real task. Use for UI and interaction work; not code-only bug audits or system architecture review.
+metadata:
+  lang: zh
 ---
-
 # Interface Design
 
 把页面做得协调、精致、好用：视觉层级、比例、排版、留白和细节要共同成立；组件、信息和操作要服务于真实任务，避免堆叠无用控件。理论和参考用于校准判断，最终取舍回到产品、真实内容和实际画面。

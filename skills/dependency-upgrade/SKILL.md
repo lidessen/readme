@@ -1,8 +1,9 @@
 ---
 name: dependency-upgrade
 description: Inventory npm/Bun workspaces and Go modules, distinguish declared and resolved versions, assess upgrade candidates, and implement authorized updates. Use for dependency upgrade decisions and execution, not as a complete security audit.
+metadata:
+  lang: zh
 ---
-
 # Dependency Upgrade
 
 把版本查询变成有依据的升级决定。先读取目标项目的依赖策略、模块边界、包管理器和验证

@@ -1,8 +1,9 @@
 ---
 name: risk-driven-testing
 description: 按风险选择单元、组件、集成与完整流程保障，覆盖确定代码、Agent 协作和人工等执行方式；维护行为 YAML、测试投影与复测接续，支持 generate 生成或更新代码、localize 项目本地化。用于测试策略、补测取舍、测试价值审查，以及 Agent 参与的半自动化或智能自动化；运行诊断、Agent 评价和视觉验收按需接入专项方法。
+metadata:
+  lang: zh
 ---
-
 # 按风险选择测试保障
 
 ## 调用与职责

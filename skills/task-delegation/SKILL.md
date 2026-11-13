@@ -3,8 +3,8 @@ name: task-delegation
 description: 主 Agent 用 Herdr 交付与追踪独立任务，结合 Magpie 的模型和套餐线索选择 runner、provider 与模型，并用跨项目日志保存接续标识。用于 Herdr + Magpie 委托及其质量、延迟、成本选路；普通分治组织、不需要委托的任务和未授权付费接入不由本技能处理。
 metadata:
   short-description: Herdr + Magpie 任务委托与选路
+  lang: zh
 ---
-
 # Task Delegation · 基于 Herdr 与 Magpie 的任务委托
 
 有独立目标和验收、需要另一 runner 的能力或上下文、或并行执行收益大于交接成本时，

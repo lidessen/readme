@@ -3,8 +3,8 @@ name: skill-incubator
 description: 从理论、已有方法与实践孵化或改进 Agent skill，设计核心方法论和可执行工作流，通过分层评估、隔离实验及反馈修订候选与孵化方法。用于方法尚待发展或效果尚待验证的技能创造；已确定方法的包装、普通指令编辑、整套技能架构与领域任务执行各有对应方法。
 metadata:
   short-description: 孵化方法、设计工作流并校准技能效果
+  lang: zh
 ---
-
 # Skill Incubator · 技能孵化
 
 把真实困难发展为 Agent 可重复使用的方法。核心是复用已成立的关系，针对当前未知设计

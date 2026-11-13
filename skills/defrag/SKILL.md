@@ -1,8 +1,9 @@
 ---
 name: defrag
 description: Consolidate stale, duplicated, or misplaced code, documentation, and references while preserving valid responsibilities and behavior. Use for cleanup and ownership repair; not deciding which Agent methods deserve separate skills, redefining architecture, or visual design critique.
+metadata:
+  lang: zh
 ---
-
 # Defrag
 
 整理一个机制、概念或职责，使它的实现、说明和目录归属重新清楚。目标是降低理解、查找和

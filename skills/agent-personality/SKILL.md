@@ -3,8 +3,8 @@ name: agent-personality
 description: Design or revise MBTI-inspired working preferences and standalone handoff prompts for production Agents or deliberately differentiated collaborators; apply or evaluate them when requested. Use for intentional perspective differences; not ordinary delegation, diagnosis, or claims of stable model personality.
 metadata:
   short-description: Design and refine production Agent personalities
+  lang: zh
 ---
-
 # Agent Personality
 
 这是一个设计时 skill：把希望出现的处理差异变成可执行、可校正、可验证的交接材料。
