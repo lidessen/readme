@@ -6,8 +6,8 @@
       "name": "@lidessen/readme",
       "dependencies": {
         "meowcss": "0.3.0-alpha.2",
-        "meowjsx": "0.3.0-alpha.1",
-        "meowpress": "0.3.0-alpha.5",
+        "meowjsx": "0.3.0-alpha.2",
+        "meowpress": "0.3.0-alpha.6",
       },
       "devDependencies": {
         "@types/bun": "1.4.2",
@@ -356,9 +356,9 @@
 
     "meowcss": ["meowcss@0.3.0-alpha.2", "", { "peerDependencies": { "meowjsx": "^0.3.0-alpha.0" }, "optionalPeers": ["meowjsx"] }, "sha512-Myaj2UbfcYgIS3ytfXzZVyoQDZKjur4+inY0fOhpn2PHoej9do07zJ9rW505Z9cUOLwYLFjoxaBXo+AhyL/wUQ=="],
 
-    "meowjsx": ["meowjsx@0.3.0-alpha.1", "", {}, "sha512-reigvE0VNvyEytv6C0VpTqx/eC4kXlNZryOOaxaQxw8vnvSCIpD3fNMd2S6fEVX59lI9Ny0Kqig3HkES+F98uA=="],
+    "meowjsx": ["meowjsx@0.3.0-alpha.2", "", {}, "sha512-FfTfoNn+Er0NWaKVa6D5UVod/8W/xD0iQXclq0DK15m4VdR24y0fAVJSx69Wp0fJ8ShBtsydsyeejsvTLCiIVQ=="],
 
-    "meowpress": ["meowpress@0.3.0-alpha.5", "", { "dependencies": { "@dagrejs/dagre": "^3.1.1", "@fontsource-variable/inter": "^5.3.0", "@fontsource-variable/jetbrains-mono": "^5.3.0", "@fontsource-variable/newsreader": "^5.3.0", "@mdx-js/mdx": "^3.1.1", "mdast-util-from-markdown": "^2.0.3", "meowtail": "^0.4.0-alpha.2", "remark-gfm": "^4.0.1", "yaml": "^2.9.0" }, "peerDependencies": { "meowcss": "^0.3.0-alpha.2", "meowjsx": "^0.3.0-alpha.1" }, "bin": { "meowpress": "dist/src/cli.js" } }, "sha512-ag2TnXHQ9nS3ZLc4Q+tGENwgnlMEVlVHCVZ4JMAcSwxaCzqbDaZMyglcC0BWhdyC0cL3MCHBjXtJ5beIerbT5g=="],
+    "meowpress": ["meowpress@0.3.0-alpha.6", "", { "dependencies": { "@dagrejs/dagre": "^3.1.1", "@fontsource-variable/inter": "^5.3.0", "@fontsource-variable/jetbrains-mono": "^5.3.0", "@fontsource-variable/newsreader": "^5.3.0", "@mdx-js/mdx": "^3.1.1", "mdast-util-from-markdown": "^2.0.3", "meowtail": "^0.4.0-alpha.2", "remark-gfm": "^4.0.1", "yaml": "^2.9.0" }, "peerDependencies": { "meowcss": "^0.3.0-alpha.2", "meowjsx": "^0.3.0-alpha.2" }, "bin": { "meowpress": "dist/src/cli.js" } }, "sha512-WmugPrNf5toojvut4XfGbTpYEGYdQV40aj94PcQ0cHb3a+ORhXQOZ1WzPAAARWrD/t8bImebgSsDUWMn67F6yg=="],
 
     "meowtail": ["meowtail@0.4.0-alpha.2", "", { "dependencies": { "@floating-ui/dom": "^1.8.0", "@shikijs/langs": "4.3.1", "lucide": "1.59.0", "marked": "18.0.12", "pele": "1.9.0", "shiki": "4.3.1" }, "peerDependencies": { "meowcss": "^0.3.0-alpha.2", "meowjsx": "^0.3.0-alpha.1" } }, "sha512-T3dgJCRgcFfR4CcCD6/+BPWbb7kp/3E9rN11PACExiG3CEAbu0ozUvpB2qXu/dvz2KDspX8DkC5qi8IpOGSjbA=="],
 
