@@ -1,7 +1,7 @@
 # 原则与方法索引
 
 - 状态：current
-- 最后核对：`c2bccfc` / 2026-11-21
+- 最后核对：`b3d6ef6` / 2026-11-21（来源基线；本次索引与维护技能改动除外）
 - 维护：[principles-index](skills/principles-index/SKILL.md)（收录标准、状态口径与刷新流程见该技能）
 
 这是本仓库哲学、方法论与原则的检索工具（finding aid）。每条 = 主题、鉴别性搜索关键词、来源位置
@@ -11,7 +11,8 @@
 
 ## 范围
 
-- 已核对收录：`skills/` 全部 25 个 `SKILL.md`（标题与触发逐个看过，含本索引的维护技能）、`theory/` 一级材料与归档说明全文、代表性方法 references、与原则直接相关的 `notes/` 短想法和 `blog/` 草稿。
+- 技能入口共 25 个：既有索引记录标题与触发逐个核对；本次报告仅支持部分技能及参考资料的选择性语义阅读，未重新逐篇语义复核。`theory/` 一级材料、想法文件和归档说明有全文阅读报告；归档中其余 20 个文件仅采集标题，未逐篇读正文。
+- `notes/` 11 篇中文原文和 `blog/` 4 篇草稿有全文阅读报告；按收录标准选择相关入口。`blog/_02` 仅有标题，无正文。
 - 未逐条收录：各技能 `references/` 的其余文件（需要时打开对应目录）、与原则无关的个人观察类短想法、图片资产、构建与站点配置。
 - 译文 `notes/*.en.md` 是派生副本（frontmatter `translation.source` 记录原文哈希），不作为独立来源。
 - 线上 Pack 分组以 [`skills.sh.json`](skills.sh.json) 为准，与本索引的任务分组无关。
@@ -46,6 +47,7 @@
 | 概念命名的操作方法 | 从对象开始、开源用法、改名预期 | [skills/concept-naming/SKILL.md § 从对象而非同义词开始](skills/concept-naming/SKILL.md#从对象而非同义词开始) | 当前技能 |
 | 信息的干与湿 | 脱水/补水、归档浓度 | [notes/2026-08-26-information-hydration.md](notes/2026-08-26-information-hydration.md) | 短想法 |
 | 归档价值、信息干湿、文档组织、错放审计的原话 | IN-2026-08-26-006A / 008A / 014A、IN-2026-08-25-003A | [theory/thoughts/information.md](theory/thoughts/information.md) | 历史原文 |
+| 语言之前的碎片化思考 | prompt、对话模式、原始思绪 | [notes/2026-08-24-fragmented-thinking.md](notes/2026-08-24-fragmented-thinking.md) | 短想法 |
 | 设身处地既是价值观也是方法 | 第一视角、prompt 与环境设计 | [notes/2026-08-25-situated-perspective.md](notes/2026-08-25-situated-perspective.md) | 短想法 |
 
 ## 二、指导载体与技能形成
@@ -64,7 +66,7 @@
 | 技能怎样发展、效果怎样判断 | 验证分层、比较、结论强度 | [theory/skill-development.md § 写清当前能支持的结论](theory/skill-development.md#写清当前能支持的结论) | 方法摘编 |
 | 技能形成记录（doc-writing、质量评估、architecture、divide、defrag、steward、孵化实验） | Rossovia 形成记录 | [theory/archive/README.md § 技能形成记录](theory/archive/README.md#技能形成记录) | 项目材料归档 |
 | Agent 人格与差异化视角设计 | MBTI 维度、委派人格 | [skills/agent-personality/SKILL.md § 主流程](skills/agent-personality/SKILL.md#主流程) | 当前技能 |
-| AI 差异化性格实验 | 内外倾子 Agent | [blog/_01-ai-personality.md](blog/_01-ai-personality.md) | 草稿 |
+| AI 性格与 Agent 心理学的探索 | 矛盾人格、统一自我、输入形式、harness | [notes/2026-08-24-conflicting-thoughts-and-self.md](notes/2026-08-24-conflicting-thoughts-and-self.md)、[notes/2026-08-27-agent-psychology.md](notes/2026-08-27-agent-psychology.md)、[blog/_01-ai-personality.md](blog/_01-ai-personality.md) | 短想法、草稿 |
 
 ## 三、整体架构、分治与整理
 
@@ -79,6 +81,7 @@
 | 机制必要性锻打 | 反例、消融、重写而非追加 | [skills/design-forge/SKILL.md § 用减法辨明必要性](skills/design-forge/SKILL.md#用减法辨明必要性) | 当前技能 |
 | 长期维护者的设计取舍 | design-steward 角色 | [skills/design-steward/SKILL.md § 角色正文](skills/design-steward/SKILL.md#角色正文) | 当前技能 |
 | 保障性过度工程审查 | 门禁、误阻断、归位 | [skills/assurance-review/SKILL.md § 用最小证据区分必要与多余](skills/assurance-review/SKILL.md#用最小证据区分必要与多余) | 当前技能 |
+| 历史方法：委派、工作量与实践回返 | agent-delegation、work-estimation、practice-cycle | [theory/skills.md](theory/skills.md) | 历史原文 |
 | 边界、接回与归位 | 分工、语义保留、结果检查 | [theory/architecture-and-defrag.md § 归位时保留有效的使用关系](theory/architecture-and-defrag.md#归位时保留有效的使用关系) | 方法摘编 |
 | 归档的协作、变更与测试约定 | team-learning、change-review、testing | [theory/archive/README.md § 方法与协作](theory/archive/README.md#方法与协作) | 项目材料归档 |
 | Agent 组织与运行时设想 | WorkCell 最小模型、无总指挥的秩序 | [blog/_03-agent-organization.md](blog/_03-agent-organization.md) | 草稿 |
@@ -99,7 +102,7 @@
 | 依赖升级：声明范围与锁定结果分开 | npm / Bun / Go | [skills/dependency-upgrade/SKILL.md § 找到真实检查范围](skills/dependency-upgrade/SKILL.md#找到真实检查范围) | 当前技能 |
 | Docker 中运行 Bun | 版本门禁、开发服务 | [skills/docker-bun/SKILL.md](skills/docker-bun/SKILL.md) | 当前技能 |
 | Workcells 开发闭环（工具仍在改造，暂不推荐安装） | Delegate / Task / Actions | [skills/workcells-development-loop/SKILL.md § 划界与委托](skills/workcells-development-loop/SKILL.md#划界与委托) | 当前技能 |
-| 工作流与协作的现场判断 | channel 模式失效 | [notes/2026-11-13-232600-channel-mode-workflow.md](notes/2026-11-13-232600-channel-mode-workflow.md) | 短想法 |
+| 工作流与信息流 | channel 模式、角色、信息流向、WorkCell | [notes/2026-11-13-232600-channel-mode-workflow.md](notes/2026-11-13-232600-channel-mode-workflow.md)、[blog/_03-agent-organization.md](blog/_03-agent-organization.md) | 短想法、草稿 |
 | 和 AI 做项目仍要亲自下场 | 掌控感、实践是试金石 | [notes/2026-11-13-232700-ai-project-participation.md](notes/2026-11-13-232700-ai-project-participation.md) | 短想法 |
 | 资源不足的计划 | 衣架、预案 | [notes/2026-11-13-232700-resource-shortage-planning.md](notes/2026-11-13-232700-resource-shortage-planning.md) | 短想法 |
 | Agent Loop as a Service | AaaS、harness 分工 | [blog/_04-agent-loop-as-service.md](blog/_04-agent-loop-as-service.md) | 草稿 |
@@ -115,7 +118,7 @@
 | 配图与封面 | 视觉任务、资产挂接 | [skills/post-visual/SKILL.md § 参考与审美方向](skills/post-visual/SKILL.md#参考与审美方向) | 当前技能 |
 | 辩证调研与吸收 | 矛盾、可迁移结构 | [skills/research-synthesis/SKILL.md § 从自身的问题进入](skills/research-synthesis/SKILL.md#从自身的问题进入) | 当前技能 |
 | 套餐性价比分析 | API 等值、标价倍率 | [skills/plan-value-analysis/SKILL.md § 取证与估计](skills/plan-value-analysis/SKILL.md#取证与估计) | 当前技能 |
-| 都江堰与工程化 harness 设计 | 顺势、环境改造 | [blog/_02-dujiangyan-harness-design.md](blog/_02-dujiangyan-harness-design.md) | 草稿 |
+| 都江堰与工程化 Harness 设计（仅标题） | 都江堰、Harness、工程设计 | [blog/_02-dujiangyan-harness-design.md](blog/_02-dujiangyan-harness-design.md) | 草稿 |
 
 ## 六、界面与视觉
 
