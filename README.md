@@ -90,7 +90,7 @@ bun run check:workers
 | --- | --- |
 | 推进开发任务、带目标工作并从工作基线到验收 | [agile-development](skills/agile-development/SKILL.md) |
 | 组织职责、依赖与整体结构 | [architecture](skills/architecture/SKILL.md) |
-| 设计 Agent 指导或发展方法 | [agent-guidance](skills/agent-guidance/SKILL.md)、[skill-incubator](skills/skill-incubator/SKILL.md) |
+| 设计 Agent 指导、面向 Agent 的视图或发展方法 | [agent-guidance](skills/agent-guidance/SKILL.md)、[skill-incubator](skills/skill-incubator/SKILL.md) |
 | 分治协作 | [divide-and-conquer](skills/divide-and-conquer/SKILL.md) |
 | 设计测试、选择投入或接续复测 | [risk-driven-testing](skills/risk-driven-testing/SKILL.md) |
 | 整理结构或评估依赖升级 | [defrag](skills/defrag/SKILL.md)、[dependency-upgrade](skills/dependency-upgrade/SKILL.md) |
