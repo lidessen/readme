@@ -1,11 +1,11 @@
 # Skills
 
-这个仓库收录用于 Agent 开发协作的通用技能，以及相关的理论、感悟和文章。技能覆盖架构与界面设计、文档写作、调研、分治协作、测试和依赖维护，供不同项目按任务选用；理论与文章也可以独立阅读。维护本仓库时先读 [AGENTS.md](AGENTS.md)。
+这个仓库收录用于 Agent 开发协作的通用技能，以及相关的理论、感悟和文章。技能覆盖架构与界面设计、项目文档与博客写作、调研、分治协作、开发推进、环境改造、测试和依赖维护，供不同项目按任务选用；理论与文章也可以独立阅读。维护本仓库时先读 [AGENTS.md](AGENTS.md)。
 
 ## 内容
 
 - [skills/](skills/)：可安装的技能，每个目录以 `SKILL.md` 为入口，包含方法说明和必要资源。其中 `workcells-development-loop` 对应的工具仍在改造中、当前不可用，暂不列入安装推荐。
-- [theory/](theory/README.md)：理论原文与方法摘编，涉及表达、信息管理、技能方法和结构整理。
+- [theory/](theory/README.md)：理论原文、方法摘编、当前想法和项目材料归档，涉及表达、信息管理、技能方法和结构整理。
 - [notes/](notes/)：个人观察、短想法和有待探索的问题。
 - [blog/](blog/)：围绕 Agent 与软件设计的文章草稿及图片。以 `_` 开头的文章保留草稿状态。
 
@@ -88,6 +88,7 @@ bun run check:workers
 
 | 任务 | 方法入口 |
 | --- | --- |
+| 推进开发任务、带目标工作并从工作基线到验收 | [agile-development](skills/agile-development/SKILL.md) |
 | 组织职责、依赖与整体结构 | [architecture](skills/architecture/SKILL.md) |
 | 设计 Agent 指导或发展方法 | [agent-guidance](skills/agent-guidance/SKILL.md)、[skill-incubator](skills/skill-incubator/SKILL.md) |
 | 分治协作 | [divide-and-conquer](skills/divide-and-conquer/SKILL.md) |
@@ -98,6 +99,7 @@ bun run check:workers
 | 评估计划续费与配额价值 | [plan-value-analysis](skills/plan-value-analysis/SKILL.md) |
 | 界面设计与改进 | [interface-design](skills/interface-design/SKILL.md)、[ui-improvement](skills/ui-improvement/SKILL.md) |
 | 撰写项目文档 | [doc-writing](skills/doc-writing/SKILL.md) |
+| 写博客短想法、整理草稿、审校或配图 | [capture](skills/capture/SKILL.md)、[draft](skills/draft/SKILL.md)、[post-review](skills/post-review/SKILL.md)、[post-visual](skills/post-visual/SKILL.md) |
 | 调研材料与想法 | [research-synthesis](skills/research-synthesis/SKILL.md) |
 
 多轮测试和中断续接的方法在 `risk-driven-testing` 的按需参考中；隔离现场评估方法在 `agent-guidance` 的评估参考中。安装时先查看所选仓库版本实际提供的技能。
@@ -108,12 +110,13 @@ Pack 提供分组浏览和安装入口，成员与仓库源码分别维护：
 
 | Pack | 技能数 | 包含的技能 |
 | --- | ---: | --- |
-| [lidessen](https://skills.sh/p/VwNOI0FZ0EAGV7Hy) | 19 | 以下各组去重后的全部技能 |
+| [lidessen](https://skills.sh/p/VwNOI0FZ0EAGV7Hy) | 23 | 以下各组去重后的全部技能 |
 | [agent](https://skills.sh/p/djYQ0UTttmOpfna4) | 4 | [skill-incubator](skills/skill-incubator/SKILL.md)、[agent-guidance](skills/agent-guidance/SKILL.md)、[agent-personality](skills/agent-personality/SKILL.md)、[divide-and-conquer](skills/divide-and-conquer/SKILL.md) |
-| [development](https://skills.sh/p/SazSJU8yDLRSqIF5) | 13 | [architecture](skills/architecture/SKILL.md)、[assurance-review](skills/assurance-review/SKILL.md)、[concept-naming](skills/concept-naming/SKILL.md)、[defrag](skills/defrag/SKILL.md)、[design-forge](skills/design-forge/SKILL.md)、[design-steward](skills/design-steward/SKILL.md)、[doc-writing](skills/doc-writing/SKILL.md)、[interface-design](skills/interface-design/SKILL.md)、[ui-improvement](skills/ui-improvement/SKILL.md)、[oneshot](skills/oneshot/SKILL.md)、[risk-driven-testing](skills/risk-driven-testing/SKILL.md)、[docker-bun](skills/docker-bun/SKILL.md)、[dependency-upgrade](skills/dependency-upgrade/SKILL.md) |
+| [development](https://skills.sh/p/SazSJU8yDLRSqIF5) | 13 | [architecture](skills/architecture/SKILL.md)、[assurance-review](skills/assurance-review/SKILL.md)、[concept-naming](skills/concept-naming/SKILL.md)、[defrag](skills/defrag/SKILL.md)、[design-forge](skills/design-forge/SKILL.md)、[design-steward](skills/design-steward/SKILL.md)、[doc-writing](skills/doc-writing/SKILL.md)、[interface-design](skills/interface-design/SKILL.md)、[ui-improvement](skills/ui-improvement/SKILL.md)、[agile-development](skills/agile-development/SKILL.md)、[risk-driven-testing](skills/risk-driven-testing/SKILL.md)、[docker-bun](skills/docker-bun/SKILL.md)、[dependency-upgrade](skills/dependency-upgrade/SKILL.md) |
 | [workflow](https://skills.sh/p/id3m9AGDJSzskEsP) | 2 | [research-synthesis](skills/research-synthesis/SKILL.md)、[plan-value-analysis](skills/plan-value-analysis/SKILL.md) |
+| writing（本地分组，线上 Pack 待建） | 4 | [capture](skills/capture/SKILL.md)、[draft](skills/draft/SKILL.md)、[post-review](skills/post-review/SKILL.md)、[post-visual](skills/post-visual/SKILL.md) |
 
-Pack 的成员按 [`skills.sh.json`](skills.sh.json) 的分组定义，各组可以交叉包含同一技能，同一份技能源码不因分组重复；GitHub 安装不受分组限制，项目按任务选择所需技能即可。线上 Pack 的成员可能滞后于源码（如缺少后加技能），以上表为准。
+Pack 的成员按 [`skills.sh.json`](skills.sh.json) 的分组定义，各组可以交叉包含同一技能，同一份技能源码不因分组重复；GitHub 安装不受分组限制，项目按任务选择所需技能即可。线上 Pack 的成员可能滞后于源码（如缺少后加技能），以上表为准。`writing` 是本次新增的本地分组，线上 Pack 尚未创建；`lidessen` 的 23 是本地分组去重后的数量，线上可能仍为 19。
 
 Pack 的完整安装尚未通过验收，已有验证副本未完整取得部分技能的引用文件和脚本。完整验证前，项目安装请继续使用下面的 GitHub 直接安装命令。
 
@@ -135,7 +138,7 @@ npx --yes skills@1.7.4 add lidessen/skills --skill interface-design -a codex --c
 
 ## 使用
 
-从当前任务选择方法：[architecture](skills/architecture/SKILL.md) 用于职责、依赖与整体结构设计，[interface-design](skills/interface-design/SKILL.md) 用于界面视觉与交互，[doc-writing](skills/doc-writing/SKILL.md) 用于项目文档，[oneshot](skills/oneshot/SKILL.md) 用于一次明确请求直接落地并验收。
+从当前任务选择方法：[architecture](skills/architecture/SKILL.md) 用于职责、依赖与整体结构设计，[interface-design](skills/interface-design/SKILL.md) 用于界面视觉与交互，[doc-writing](skills/doc-writing/SKILL.md) 用于项目文档，[agile-development](skills/agile-development/SKILL.md) 用于从工作基线到验收推进开发任务：小任务和取证批次走快车道，按项目实际情况建立工作基线，覆盖工作日志、提交边界、环境改造和反馈循环；团队带着目标工作，只把少量、自足的决策点交给人类。写博客短想法、整理草稿、审校或配图时，用 [capture](skills/capture/SKILL.md)、[draft](skills/draft/SKILL.md)、[post-review](skills/post-review/SKILL.md)、[post-visual](skills/post-visual/SKILL.md)。
 
 安装后，在 Agent 任务中明确所需技能和要解决的问题，例如“使用 interface-design 检查这个页面的视觉层级与交互，并说明改进建议”。技能的发现与调用方式以所用 Agent 为准。
 

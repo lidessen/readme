@@ -13,7 +13,7 @@
     },
     {
       "title": "development",
-      "description": "设计架构与界面，维护代码和依赖，验证行为并撰写项目文档，一次做完实现。",
+      "description": "设计架构与界面，改造开发环境，维护代码和依赖，验证行为并撰写项目文档；带目标推进开发、分治并行，只把少量自足决策点交给人类。",
       "skills": [
         "architecture",
         "assurance-review",
@@ -23,7 +23,7 @@
         "design-steward",
         "doc-writing",
         "interface-design",
-        "oneshot",
+        "agile-development",
         "ui-improvement",
         "risk-driven-testing",
         "docker-bun",
@@ -34,6 +34,11 @@
       "title": "workflow",
       "description": "围绕个人目标调研材料与想法，形成有依据的取舍。",
       "skills": ["research-synthesis", "plan-value-analysis"]
+    },
+    {
+      "title": "writing",
+      "description": "维护博客短想法、文章草稿、审校和配图，服务本仓库的内容写作。",
+      "skills": ["capture", "draft", "post-review", "post-visual"]
     }
   ]
 }

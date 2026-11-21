@@ -39,8 +39,26 @@
 | `theory/skill-development.md` | `docs/tooling/skill-quality-evaluation-design.md` |
 | `theory/architecture-and-defrag.md` | `docs/tooling/structuring-skill-design.md`、`docs/tooling/divide-and-conquer-skill-design.md`、`docs/tooling/defrag-skill-design.md`、`docs/tooling/design-steward-skill-design.md` |
 
-摘编保留通用方法、来源与证据限制，完整内部形成记录仍归源仓库；内部试验不改称公开验证。
+摘编保留通用方法、来源与证据限制；相关完整形成记录和未摘编的 `doc-writing`、技能质量评估与孵化实验已归档到[项目材料归档](theory/archive/README.md)，其余内部试验记录仍归源仓库；内部试验不改称公开验证。
 历史原文、摘编与未随迁归档的关系见[理论入口](theory/README.md)。
+
+## 博客写作技能
+
+四个博客写作技能来自 Rossovia 固定提交 `7c15c6e4e5b1531a667bf2d89627756a325f628e` 的 `.agents/skills/`：
+
+| 本仓库技能 | 原始位置与适配 |
+| --- | --- |
+| `capture` | 来自 `.agents/skills/capture/SKILL.md`；去掉独立 checkout、`LIDESSEN_SKILLS_ROOT` 和 `<skills-root>`，改为本仓库 `notes/`。 |
+| `draft` | 来自 `.agents/skills/draft/`；保留编号路由、轻量整理和两个 references，路径改为本仓库 `blog/`。 |
+| `post-review` | 来自 `.agents/skills/post-review/SKILL.md`；风格样本改为本仓库 `notes/`，保留草稿 `_` 前缀规则。 |
+| `post-visual` | 来自 `.agents/skills/post-visual/`；保留视觉任务、复核和资产命名方法，资产 URL 改为本仓库构建的 `/assets/posts/<post-slug>/`；作者自有的 13 张参考图随技能保留。 |
+
+这四个技能服务本仓库的 `notes/` 和 `blog/`，不进入开发主链；`doc-writing` 仍负责项目文档，二者边界不变。
+`doc-writing` 的完整形成记录已归档到 `theory/archive/rossovia/doc-writing-skill-design.md`，本仓库只保留技能和可执行参考。
+
+## 项目材料归档
+
+Rossovia 中仍有价值、但不适合直接成为本仓库技能的方法、角色材料和技能形成记录，已按原项目结构归档到 [`theory/archive/rossovia/`](theory/archive/README.md)，来源版本为固定提交 `7c15c6e4e5b1531a667bf2d89627756a325f628e`。归档保留原文、项目引用和当时的证据边界，不是本仓库的当前方法，也不表示已采纳；本机绝对路径和临时目录已隐去。计划、现场记录、UI 实验资产和研究工程仍留源仓库。
 
 ## 写作与项目边界
 

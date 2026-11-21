@@ -1,4 +1,6 @@
 .DS_Store
+.rex-coordination/
+.claude/settings.local.json
 node_modules/
 dist/
 content/
