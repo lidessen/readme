@@ -88,7 +88,7 @@ bun run check:workers
 
 | 任务 | 方法入口 |
 | --- | --- |
-| 推进开发任务、带目标工作并从工作基线到验收 | [agile-development](skills/agile-development/SKILL.md) |
+| 推进开发任务、带目标工作并从工作基线到验收，兼容与测试投入按当前主导约束适配 | [agile-development](skills/agile-development/SKILL.md) |
 | 组织职责、依赖与整体结构 | [architecture](skills/architecture/SKILL.md) |
 | 设计 Agent 指导、面向 Agent 的视图或发展方法 | [agent-guidance](skills/agent-guidance/SKILL.md)、[skill-incubator](skills/skill-incubator/SKILL.md) |
 | 分治协作 | [divide-and-conquer](skills/divide-and-conquer/SKILL.md) |
@@ -137,7 +137,7 @@ npx --yes skills@1.7.4 add lidessen/skills --skill interface-design -a codex --c
 
 ## 使用
 
-从当前任务选择方法：[architecture](skills/architecture/SKILL.md) 用于职责、依赖与整体结构设计，[interface-design](skills/interface-design/SKILL.md) 用于界面视觉与交互，[doc-writing](skills/doc-writing/SKILL.md) 用于项目文档，[agile-development](skills/agile-development/SKILL.md) 用于从工作基线到验收推进开发任务：小任务和取证批次走快车道，按项目实际情况建立工作基线，覆盖工作日志、提交边界、环境改造和反馈循环；团队带着目标工作，只把少量、自足的决策点交给人类。写博客短想法、整理草稿、审校或配图时，用 [capture](skills/capture/SKILL.md)、[draft](skills/draft/SKILL.md)、[post-review](skills/post-review/SKILL.md)、[post-visual](skills/post-visual/SKILL.md)。
+从当前任务选择方法：[architecture](skills/architecture/SKILL.md) 用于职责、依赖与整体结构设计，[interface-design](skills/interface-design/SKILL.md) 用于界面视觉与交互，[doc-writing](skills/doc-writing/SKILL.md) 用于项目文档，[agile-development](skills/agile-development/SKILL.md) 用于从工作基线到验收推进开发任务：小任务和取证批次走快车道，兼容、迁移与测试投入按当前主导约束和实际证据适配，不套阶段标签；按项目实际情况建立工作基线，覆盖工作日志、提交边界、环境改造和反馈循环；团队带着目标工作，只把少量、自足的决策点交给人类。写博客短想法、整理草稿、审校或配图时，用 [capture](skills/capture/SKILL.md)、[draft](skills/draft/SKILL.md)、[post-review](skills/post-review/SKILL.md)、[post-visual](skills/post-visual/SKILL.md)。
 
 安装后，在 Agent 任务中明确所需技能和要解决的问题，例如“使用 interface-design 检查这个页面的视觉层级与交互，并说明改进建议”。技能的发现与调用方式以所用 Agent 为准。
 
