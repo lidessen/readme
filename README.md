@@ -8,6 +8,7 @@
 - [theory/](theory/README.md)：理论原文、方法摘编、当前想法和项目材料归档，涉及表达、信息管理、技能方法和结构整理。
 - [notes/](notes/)：个人观察、短想法和有待探索的问题。
 - [blog/](blog/)：围绕 Agent 与软件设计的文章草稿及图片。以 `_` 开头的文章保留草稿状态。
+- [PRINCIPLES-INDEX.md](PRINCIPLES-INDEX.md)：本仓库哲学、方法与原则的检索索引：主题、关键词、来源位置与状态，只指路、不概述原文；收录与刷新流程见 [principles-index](skills/principles-index/SKILL.md)。
 
 ## 站点
 
@@ -100,6 +101,7 @@ bun run check:workers
 | 撰写项目文档 | [doc-writing](skills/doc-writing/SKILL.md) |
 | 写博客短想法、整理草稿、审校或配图 | [capture](skills/capture/SKILL.md)、[draft](skills/draft/SKILL.md)、[post-review](skills/post-review/SKILL.md)、[post-visual](skills/post-visual/SKILL.md) |
 | 调研材料与想法 | [research-synthesis](skills/research-synthesis/SKILL.md) |
+| 维护本仓库的原则与方法索引（项目内技能，不进 Pack 分组） | [principles-index](skills/principles-index/SKILL.md) |
 
 多轮测试和中断续接的方法在 `risk-driven-testing` 的按需参考中；隔离现场评估方法在 `agent-guidance` 的评估参考中。安装时先查看所选仓库版本实际提供的技能。
 
