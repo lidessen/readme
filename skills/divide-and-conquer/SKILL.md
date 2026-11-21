@@ -49,6 +49,10 @@ metadata:
 改派、合并或顺序化；正常工作不靠高频催报。等待超时不等于任务失败或写入停止：重派前核实
 旧任务状态，必要时停止旧执行者并检查已产生的效果，再交接剩余工作，避免双重写入。
 
+存在多个可用执行器、模型或订阅通道时，在任务开始或当前额度耗尽时按能力门槛、计费边界
+与重置紧迫度选路一次。单轮任务内保持选定模型与执行器，避免频繁切换破坏 Prompt Cache
+与推理连续性。
+
 ## 合起来验证原任务
 
 检查返回产物与关键证据，按共同约束解决矛盾、遗漏与重复；子 Agent 的结论不能因数量或
@@ -65,7 +69,8 @@ metadata:
 ## 按需使用
 
 从核心设计检查全部实现时，读 [implementation-audit.md](references/implementation-audit.md)，
-同时处理局部覆盖与跨模块链路。核心本身需要重审时使用 [design-forge](https://github.com/lidessen/skills/blob/main/skills/design-forge/SKILL.md)；
+同时处理局部覆盖与跨模块链路。需要在多个执行器、订阅窗口或模型通道间选路与处理限流切换时，
+读 [runner-routing.md](references/runner-routing.md)。核心本身需要重审时使用 [design-forge](https://github.com/lidessen/skills/blob/main/skills/design-forge/SKILL.md)；
 本 skill 组织执行，不替代领域方法，也不自行改变设计决定。
 
 若未决问题是项目或技能体系怎样长期分工、组织怎样分配权责与资源，按需使用
