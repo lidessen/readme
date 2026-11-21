@@ -24,8 +24,9 @@ runtime/base 才拥有权限、工具能力、事务、并发、恢复、持久�
 - 指令越来越长、skill 互相重叠、触发不清，或上下文开始被无关材料占满。
 - 需要把已接受的方法写成可独立交接的 Agent 任务或方法材料。
 - 设计或审查 Agent 上下文组装中的信息分层、就地帮助、历史翻阅或工具结果展开入口。
-- 设计或评审面向 Agent 的视图或工具投影：过滤、摘要与默认字段之外，来源、省略范围与
-  替代取材入口是否可见，Agent 能否随任务自行检视与调整。
+- 设计或评审面向 Agent 的视图或工具投影：是否保留底层结构与真实拓扑，过滤与折叠是否
+  可见、可由 Agent 按任务展开，省略范围与来源是否明确，而不是以摘要或重新分组的投影
+  替代结构。
 
 概念定义、面向人的文章、委派拓扑、工具实现和运行时硬保证，交给相应
 的相邻 owner；不要为了使用本 skill 强行创建一个 skill 文件。
@@ -60,7 +61,7 @@ runtime/base 才拥有权限、工具能力、事务、并发、恢复、持久�
 
 - 判断是否值得沉淀为 skill 或其他持久 guidance、如何拆分/合并/降级：读 [formation.md](references/formation.md)。
 - 编写或压缩 Agent-facing 任务、handoff、skill 正文或 focus anchor：读 [composition.md](references/composition.md)。
-- 组织上下文内容、状态与操作提示，设计渐进披露，或设计 Agent 可自行探索、过滤与调整的视图投影：读 [context-interface.md](references/context-interface.md)。
+- 组织上下文内容、状态与操作提示，设计渐进披露，或设计保留底层结构、Agent 可自行过滤、折叠与展开的视图投影：读 [context-interface.md](references/context-interface.md)。
 - 诊断载体层级、重叠、冲突和上下文负担：读 [review.md](references/review.md)。
 - 设计行为探针或报告证据强度：读 [evaluation.md](references/evaluation.md)。
 - 实际观察一段 Agent 工作、隔离操作者答案或开展开放评价：读 [field-trial.md](references/field-trial.md)。
