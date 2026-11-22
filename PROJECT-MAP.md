@@ -1,7 +1,7 @@
 # Readme 项目地图
 
 - 状态：current
-- 最后核对：`e3e0239` / 2026-11-21
+- 最后核对：`8d8a17e` / 2026-11-22
 - 维护者：readme 项目窗
 - 战略健康：正常 —— 通用技能库、理论归档、短想法与 Meowpress 静态站点职责清晰；私有协调材料已完整迁出至 `~/.workcells/workspace/`。
 - 用途：给技术型决策者判断仓库边界、构建与发布健康；不写日常待办、私有现场或个人工作状态。
@@ -50,7 +50,7 @@
 
 ## 6. 变化、风险与健康
 
-- 最近变化：`e3e0239`（2026-11-21）合并了 `agile-development`、`capture`/`draft`/`post-review`/`post-visual`、5 篇笔记与 `theory/archive/`，移除 `skills/oneshot/`；私有协调目录 `.rex-coordination/` 已整体迁出至 `~/.workcells/workspace/`。
+- 最近变化：`e3e0239`→`8d8a17e`（2026-11-21~22）新增本 `PROJECT-MAP.md`、根目录 [PRINCIPLES-INDEX.md](PRINCIPLES-INDEX.md) 与仓库内 `principles-index` 维护技能（含 `check_index.py` 校验与刷新流程）；退役 `skills/task-delegation/`，把 runner 路由并入 `divide-and-conquer`；并按索引迭代技能：`agent-guidance` 增加 Agent 可自行探索、保留底层结构的视图投影要求，`agile-development` 落实按当前主导约束定兼容与测试姿态与预算化安全审查门禁，`architecture` 增加“先修路，再装防护栏”，`divide-and-conquer` 增加 worker-advisor 多轮协作参考，`interface-design` 增加程序化渲染与视觉闭环。
 - 走偏风险：将私有协调状态、具体业务项目命令或未脱敏路径混入公开仓库或博客构建产物。
 - 债务与限制：线上 `skills.sh` Pack 与本地 `skills.sh.json`（含新增 `writing` 组）仍需单独按官方 Pack 流程核对同步；`workcells-development-loop` 尚待 Workcells 底座能力齐备后评估。
 - 结论：**正常**。仓库内容边界清晰，公开构建与审计护栏完备。
