@@ -1,6 +1,6 @@
 ---
 name: interface-design
-description: Design, refine, or critique product interfaces and interactions, judging visual craft and whether each screen, element, and flow serves a real task. Use for UI and interaction work; not code-only bug audits or system architecture review.
+description: Design, refine, or critique Web, desktop GUI, and terminal TUI interfaces and interactions, judging visual craft and whether each screen, element, and flow serves a real task. Use for UI and interaction work; not code-only bug audits or system architecture review.
 metadata:
   lang: zh
 ---
@@ -79,6 +79,14 @@ metadata:
 思想可以指导形式，形式也会暴露思想的缺陷。面对不协调，不急着补例外：检查是表达不当、假设错误，还是立场需要重写。保留手艺与感知判断的空间；无法从理论唯一推出的字距、比例和色感，通过有说明的反复观察选择，不伪造科学必然性。
 
 ## 在表达中检验，之后才沉淀参数
+
+### 程序化渲染与视觉闭环
+
+Web、桌面 GUI 和 TUI（终端界面）的改动不能只依赖构建或逻辑单元测试：它们通过也可能出现标题裁切、侧栏换行或内容不可读。用真实内容和代表性状态检验实际渲染：
+
+- **Web / 桌面 GUI**：采集真实截图或检查正在运行的窗口，例如用 Playwright 或 `neowind`；修改后复看并走关键动作。
+- **终端 TUI**：对 `View()` 等渲染输出在实际终端尺寸下做程序化快照与断言，例如 `80x24`、`120x36`。检查渲染总高度 `<= terminalHeight`，页头和页脚不被挤出屏幕；应为单行的列表行不发生别扭换行；结构化日志和数据解码为人可读内容，而非原样输出转义 JSON；在明暗主题下检查自适应对比度。计算宽度时考虑终端显示列宽与控制序列，而非只数字符。
+- 条件允许时，再用真实 PTY 或独立视觉检查复核终端画面与交互。分别说明自动断言、实际观察和未验证部分；快照通过不能代替视觉判断。
 
 评审构图、比例、组件组合或比较方向时，读 [视觉评审与对照](references/review-criteria.md)：从整屏关系定位问题，按需对照组件、场景与实际应用，并复核已确认的设计选择。源码和测量用于解释观察，不能替代画面判断；组件库与展示工具也适用。
 
