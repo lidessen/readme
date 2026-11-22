@@ -32,6 +32,11 @@ metadata:
 把共同核心传给每个执行者，细节留在负责者上下文中。不要让每个 Agent 重读全仓，也不要
 只给一个目录名。具体工具顺序和局部解法留给执行者；下游依赖的接口与返回要求须清楚。
 
+区分两类贡献的性质：收集资料、低级加工、写清细节与推进执行是高劳动工作（Worker），设计
+思路、方向与边界裁决是高价值、低劳动的判断（Advisor）。写清细节不等于完善设计，不要给
+执行者留下需要自行思考“怎么设计”的空白；推进中遇到新事实或设计分叉，按需多轮交替回传
+拍板，而不是一边猜一边写。
+
 读可交叉，写要有明确归属；共享文件或服务由指定负责人修改，或使用实际支持的隔离副本
 后再整合。主 Agent 不同时改正在委派的对象。全局前提或公共接口改变时，通知受影响者，
 确认他们使用的新依据；不能把不同版本的结论直接合并。
@@ -70,7 +75,9 @@ metadata:
 
 从核心设计检查全部实现时，读 [implementation-audit.md](references/implementation-audit.md)，
 同时处理局部覆盖与跨模块链路。需要在多个执行器、订阅窗口或模型通道间选路与处理限流切换时，
-读 [runner-routing.md](references/runner-routing.md)。核心本身需要重审时使用 [design-forge](https://github.com/lidessen/skills/blob/main/skills/design-forge/SKILL.md)；
+读 [runner-routing.md](references/runner-routing.md)。需要区分高劳动执行与高价值边界判断、
+组织 Worker 与 Advisor 按需多轮交替时，读 [worker-advisor.md](references/worker-advisor.md)。
+核心本身需要重审时使用 [design-forge](https://github.com/lidessen/skills/blob/main/skills/design-forge/SKILL.md)；
 本 skill 组织执行，不替代领域方法，也不自行改变设计决定。
 
 若未决问题是项目或技能体系怎样长期分工、组织怎样分配权责与资源，按需使用

@@ -1,7 +1,7 @@
 # 原则与方法索引
 
 - 状态：current
-- 最后核对：`b3d6ef6` / 2026-11-21（来源基线；本次索引与维护技能改动除外）
+- 最后核对：`b3d6ef6` / 2026-11-21（来源基线；本次索引改动、divide-and-conquer 技能正文及新增的 worker-advisor 参考除外）
 - 维护：[principles-index](skills/principles-index/SKILL.md)（收录标准、状态口径与刷新流程见该技能）
 
 这是本仓库哲学、方法论与原则的检索工具（finding aid）。每条 = 主题、鉴别性搜索关键词、来源位置
@@ -77,6 +77,7 @@
 | 代码库边界、组织设计与技能体系 | codebase-design、hybrid-repositories、skill-systems | [architecture codebase-design.md § 核心判断](skills/architecture/references/codebase-design.md#核心判断)、[organization-design.md § 从真实工作看分工](skills/architecture/references/organization-design.md#从真实工作看分工)、[skill-systems.md § 同时看覆盖与接合](skills/architecture/references/skill-systems.md#同时看覆盖与接合) | 当前技能（参考） |
 | 分治：有界贡献与整合验收 | sub-agent、swarm、合起来验证 | [skills/divide-and-conquer/SKILL.md § 先掌握整体](skills/divide-and-conquer/SKILL.md#先掌握整体再划出可独立推进的部分) | 当前技能 |
 | 实现核对与执行器选路 | 双向核对、计费边界 | [divide implementation-audit.md § 两个方向共同覆盖](skills/divide-and-conquer/references/implementation-audit.md#两个方向共同覆盖) | 当前技能（参考） |
+| Worker 与 Advisor：高劳动执行与高价值拍板 | 写清细节≠完善设计、零设计空白、按需多轮交替 | [divide worker-advisor.md § 职责切分](skills/divide-and-conquer/references/worker-advisor.md#职责切分) | 当前技能（参考） |
 | 整理归位与语义保留 | 反事实检查、四类判断 | [skills/defrag/SKILL.md § 不变量](skills/defrag/SKILL.md#不变量)、[defrag evidence.md § 四类判断](skills/defrag/references/evidence.md#四类判断) | 当前技能 |
 | 机制必要性锻打 | 反例、消融、重写而非追加 | [skills/design-forge/SKILL.md § 用减法辨明必要性](skills/design-forge/SKILL.md#用减法辨明必要性) | 当前技能 |
 | 长期维护者的设计取舍 | design-steward 角色 | [skills/design-steward/SKILL.md § 角色正文](skills/design-steward/SKILL.md#角色正文) | 当前技能 |
