@@ -2,6 +2,7 @@
 
 - 状态：current
 - 最后核对：`b3d6ef6` / 2026-11-21（来源基线；本次索引改动、divide-and-conquer 技能正文及新增的 worker-advisor 参考除外）
+- 增量核对：`f277e90` / 2026-11-22（architecture 技能与代码库设计参考；本次 architecture 原则及索引改动除外）
 - 维护：[principles-index](skills/principles-index/SKILL.md)（收录标准、状态口径与刷新流程见该技能）
 
 这是本仓库哲学、方法论与原则的检索工具（finding aid）。每条 = 主题、鉴别性搜索关键词、来源位置
@@ -73,6 +74,7 @@
 | 主题 | 搜索关键词 | 来源 | 状态 |
 | --- | --- | --- | --- |
 | 从目的与现实矛盾组织整体 | 责任、权力、依赖 | [skills/architecture/SKILL.md § 从整体目的与现实矛盾出发](skills/architecture/SKILL.md#从整体目的与现实矛盾出发) | 当前技能 |
+| 先修路，再装防护栏 | 业务主路径、生命周期、真实风险、边界护栏 | [skills/architecture/SKILL.md § 先修路，再装防护栏](skills/architecture/SKILL.md#先修路再装防护栏) | 当前技能 |
 | 结构决策模型 | 六关系、boundary ladder、命名 | [architecture decision-model.md § Boundary ladder](skills/architecture/references/decision-model.md#boundary-ladder) | 当前技能（参考） |
 | 代码库边界、组织设计与技能体系 | codebase-design、hybrid-repositories、skill-systems | [architecture codebase-design.md § 核心判断](skills/architecture/references/codebase-design.md#核心判断)、[organization-design.md § 从真实工作看分工](skills/architecture/references/organization-design.md#从真实工作看分工)、[skill-systems.md § 同时看覆盖与接合](skills/architecture/references/skill-systems.md#同时看覆盖与接合) | 当前技能（参考） |
 | 分治：有界贡献与整合验收 | sub-agent、swarm、合起来验证 | [skills/divide-and-conquer/SKILL.md § 先掌握整体](skills/divide-and-conquer/SKILL.md#先掌握整体再划出可独立推进的部分) | 当前技能 |
