@@ -3,6 +3,7 @@
 - 状态：current
 - 最后核对：`b3d6ef6` / 2026-11-21（来源基线；本次索引改动、divide-and-conquer 技能正文及新增的 worker-advisor 参考除外）
 - 增量核对：`f277e90` / 2026-11-22（architecture 技能与代码库设计参考；本次 architecture 原则及索引改动除外）
+- 增量核对：`3d50fd7` / 2026-11-24（视频技能全文及入口清单；本次重命名与索引改动除外，其他来源未重新核对）
 - 维护：[principles-index](skills/principles-index/SKILL.md)（收录标准、状态口径与刷新流程见该技能）
 
 这是本仓库哲学、方法论与原则的检索工具（finding aid）。每条 = 主题、鉴别性搜索关键词、来源位置
@@ -12,7 +13,7 @@
 
 ## 范围
 
-- 技能入口共 25 个：既有索引记录标题与触发逐个核对；本次报告仅支持部分技能及参考资料的选择性语义阅读，未重新逐篇语义复核。`theory/` 一级材料、想法文件和归档说明有全文阅读报告；归档中其余 20 个文件仅采集标题，未逐篇读正文。
+- 技能入口共 26 个：本次核对入口清单与视频技能全文；既有索引记录标题与触发逐个核对；本次报告仅支持部分技能及参考资料的选择性语义阅读，未重新逐篇语义复核。`theory/` 一级材料、想法文件和归档说明有全文阅读报告；归档中其余 20 个文件仅采集标题，未逐篇读正文。
 - `notes/` 11 篇中文原文和 `blog/` 4 篇草稿有全文阅读报告；按收录标准选择相关入口。`blog/_02` 仅有标题，无正文。
 - 未逐条收录：各技能 `references/` 的其余文件（需要时打开对应目录）、与原则无关的个人观察类短想法、图片资产、构建与站点配置。
 - 译文 `notes/*.en.md` 是派生副本（frontmatter `translation.source` 记录原文哈希），不作为独立来源。
@@ -119,6 +120,7 @@
 | 草稿生长 | `blog/` 编号、轻量编辑 | [skills/draft/SKILL.md](skills/draft/SKILL.md) | 当前技能 |
 | 文章审校 | `_` 前缀、人性化处理 | [skills/post-review/SKILL.md § Draft 规则](skills/post-review/SKILL.md#draft-规则) | 当前技能 |
 | 配图与封面 | 视觉任务、资产挂接 | [skills/post-visual/SKILL.md § 参考与审美方向](skills/post-visual/SKILL.md#参考与审美方向) | 当前技能 |
+| 演示与讲解视频制作 | 成本梯度、分镜、候选方向、逐镜头返工 | [skills/draft-video/SKILL.md](skills/draft-video/SKILL.md) | 当前技能 |
 | 辩证调研与吸收 | 矛盾、可迁移结构 | [skills/research-synthesis/SKILL.md § 从自身的问题进入](skills/research-synthesis/SKILL.md#从自身的问题进入) | 当前技能 |
 | 套餐性价比分析 | API 等值、标价倍率 | [skills/plan-value-analysis/SKILL.md § 取证与估计](skills/plan-value-analysis/SKILL.md#取证与估计) | 当前技能 |
 | 都江堰与工程化 Harness 设计（仅标题） | 都江堰、Harness、工程设计 | [blog/_02-dujiangyan-harness-design.md](blog/_02-dujiangyan-harness-design.md) | 草稿 |

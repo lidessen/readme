@@ -93,7 +93,7 @@ bun run check:workers
 | 组织职责、依赖与整体结构 | [architecture](skills/architecture/SKILL.md) |
 | 设计 Agent 指导、面向 Agent 的视图或发展方法 | [agent-guidance](skills/agent-guidance/SKILL.md)、[skill-incubator](skills/skill-incubator/SKILL.md) |
 | 分治协作 | [divide-and-conquer](skills/divide-and-conquer/SKILL.md) |
-| 制作产品演示或讲解视频 | [demo-video](skills/demo-video/SKILL.md) |
+| 制作产品演示或讲解视频 | [draft-video](skills/draft-video/SKILL.md) |
 | 设计测试、选择投入或接续复测 | [risk-driven-testing](skills/risk-driven-testing/SKILL.md) |
 | 整理结构或评估依赖升级 | [defrag](skills/defrag/SKILL.md)、[dependency-upgrade](skills/dependency-upgrade/SKILL.md) |
 | 在 Docker 中运行 Bun | [docker-bun](skills/docker-bun/SKILL.md) |
@@ -115,7 +115,7 @@ Pack 提供分组浏览和安装入口，成员与仓库源码分别维护：
 | [lidessen](https://skills.sh/p/VwNOI0FZ0EAGV7Hy) | 24 | 以下各组去重后的全部技能 |
 | [agent](https://skills.sh/p/djYQ0UTttmOpfna4) | 4 | [skill-incubator](skills/skill-incubator/SKILL.md)、[agent-guidance](skills/agent-guidance/SKILL.md)、[agent-personality](skills/agent-personality/SKILL.md)、[divide-and-conquer](skills/divide-and-conquer/SKILL.md) |
 | [development](https://skills.sh/p/SazSJU8yDLRSqIF5) | 13 | [architecture](skills/architecture/SKILL.md)、[assurance-review](skills/assurance-review/SKILL.md)、[concept-naming](skills/concept-naming/SKILL.md)、[defrag](skills/defrag/SKILL.md)、[design-forge](skills/design-forge/SKILL.md)、[design-steward](skills/design-steward/SKILL.md)、[doc-writing](skills/doc-writing/SKILL.md)、[interface-design](skills/interface-design/SKILL.md)、[ui-improvement](skills/ui-improvement/SKILL.md)、[agile-development](skills/agile-development/SKILL.md)、[risk-driven-testing](skills/risk-driven-testing/SKILL.md)、[docker-bun](skills/docker-bun/SKILL.md)、[dependency-upgrade](skills/dependency-upgrade/SKILL.md) |
-| [workflow](https://skills.sh/p/id3m9AGDJSzskEsP) | 3 | [research-synthesis](skills/research-synthesis/SKILL.md)、[plan-value-analysis](skills/plan-value-analysis/SKILL.md)、[demo-video](skills/demo-video/SKILL.md) |
+| [workflow](https://skills.sh/p/id3m9AGDJSzskEsP) | 3 | [research-synthesis](skills/research-synthesis/SKILL.md)、[plan-value-analysis](skills/plan-value-analysis/SKILL.md)、[draft-video](skills/draft-video/SKILL.md) |
 | writing（本地分组，线上 Pack 待建） | 4 | [capture](skills/capture/SKILL.md)、[draft](skills/draft/SKILL.md)、[post-review](skills/post-review/SKILL.md)、[post-visual](skills/post-visual/SKILL.md) |
 
 Pack 的成员按 [`skills.sh.json`](skills.sh.json) 的分组定义，各组可以交叉包含同一技能，同一份技能源码不因分组重复；GitHub 安装不受分组限制，项目按任务选择所需技能即可。线上 Pack 的成员可能滞后于源码（如缺少后加技能），以上表为准。`writing` 是本地分组，线上 Pack 尚未创建；`lidessen` 的 24 是本地分组去重后的数量，线上可能仍为 19。
