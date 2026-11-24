@@ -32,8 +32,8 @@
     },
     {
       "title": "workflow",
-      "description": "围绕个人目标调研材料与想法，形成有依据的取舍。",
-      "skills": ["research-synthesis", "plan-value-analysis"]
+      "description": "围绕个人目标调研材料与想法，形成有依据的取舍，并制作演示与讲解视频。",
+      "skills": ["research-synthesis", "plan-value-analysis", "demo-video"]
     },
     {
       "title": "writing",
