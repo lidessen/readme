@@ -33,6 +33,8 @@ bun run build
 
 改过原文或写完译文后，用工作清单补齐并重新 stamp。构建会把 `notes/` 复制到内容树，所以 stamp 作用在 `content/thoughts/` 下的副本上，完成后把该文件复制回 `notes/`：
 
+注意：`content/` 是生成副本；stamp 后如果忘记复制回 `notes/`，下一次构建会覆盖副本并静默丢失该 stamp。
+
 ```sh
 bun run build                                          # 先复制内容树，缺失和过期的译文会列出来
 bunx --no-install meowpress locales                    # 每行一条：缺什么译文、哪条过期
@@ -127,13 +129,13 @@ Pack 的完整安装尚未通过验收，已有验证副本未完整取得部分
 需要 Node.js 22.20 或更高版本。使用官方 [Skills CLI](https://github.com/vercel-labs/skills/blob/main/docs/commands.md)，可先查看可安装的技能：
 
 ```sh
-npx --yes skills@1.7.4 add lidessen/skills --list
+npx --yes skills@1.7.4 add lidessen/readme --list
 ```
 
 在项目根目录安装需要的技能，例如界面设计。安装会替换同名技能目录；已有本地改动时，先另行备份再执行：
 
 ```sh
-npx --yes skills@1.7.4 add lidessen/skills --skill interface-design -a codex --copy -y
+npx --yes skills@1.7.4 add lidessen/readme --skill interface-design -a codex --copy -y
 ```
 
 该命令将技能完整复制到项目的 `.agents/skills/`，并在项目根目录记录 `skills-lock.json`。示例选择 Codex；使用其他 Agent 时，按 CLI 文档调整 `-a` 参数。将安装目录与锁文件一起纳入项目版本控制。
