@@ -1,6 +1,6 @@
 ---
 name: agent-guidance
-description: Decide whether an Agent method belongs in a skill, prompt, or other guidance carrier; review formation, splitting, merging, expression, discovery, and activation. Use for guidance design and refinement, including agent-facing views and tool-result interfaces; developing uncertain methods through theory and experiments uses skill-incubator, not ordinary task execution or runtime guarantees.
+description: 判断 Agent 方法应放入 skill、prompt 还是其他指导载体，审查形成、拆分、合并、表达、发现与激活。用于指导设计和改进，包括面向 Agent 的视图与工具结果界面；通过理论和实验发展尚不确定的方法使用 skill-incubator，不用于普通任务执行或运行时保证。
 metadata:
   short-description: Design and review Agent guidance
   lang: zh

@@ -24,7 +24,8 @@ aid）：每条 = 主题、鉴别性搜索关键词、来源位置（文件 + �
 
 | 状态 | 覆盖 | 阅读方式 |
 | --- | --- | --- |
-| 当前技能 | `skills/*/SKILL.md` 及被点名的方法 references | 当前维护的指导，可直接使用 |
+| 当前技能 | 当前可用的 `skills/*/SKILL.md` 及被点名的方法 references | 当前维护的指导，可直接使用 |
+| 候选技能（工具暂停） | 依赖改造中、当前不可用工具的技能入口 | 可阅读方法，工具恢复并验证前暂不推荐安装或执行 |
 | 方法摘编 | `theory/skill-development.md`、`theory/architecture-and-defrag.md` | 从形成资料整理的公开摘编，不是原始记录，不替代原文 |
 | 演进想法 | `theory/thoughts/agile-development.md`、相关短想法 | 方法形成中的材料，不是已验证结论 |
 | 历史原文 | `theory/theory.md`、`theory/skills.md`、`theory/thoughts/information.md` | 旧仓固定提交迁入，保留原始字节，按历史地位阅读 |

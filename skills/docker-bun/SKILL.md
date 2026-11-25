@@ -1,6 +1,6 @@
 ---
 name: docker-bun
-description: Install dependencies and run Bun projects through Docker when host Bun is absent, incompatible, or intentionally unused. Covers Bun commands and development servers; not general container deployment or permission repair.
+description: 当宿主机没有 Bun、版本不兼容或有意不使用时，通过 Docker 安装依赖并运行 Bun 项目。涵盖 Bun 命令和开发服务器，不用于一般容器部署或权限修复。
 metadata:
   lang: zh
 ---

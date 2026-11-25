@@ -23,6 +23,8 @@ bun run build
 
 输出在 `dist/`。类型检查：`bun run typecheck`。当前锁定的包是 `meowpress@0.3.0-alpha.9`、`meowjsx@0.3.0-alpha.2`、`meowcss@0.3.0-alpha.2`。
 
+站点构建锁定 Bun 1.4.4；Workers 部署工具要求 Node.js 22.18+，下文 Skills CLI 安装要求 Node.js 22.20+，CI 则固定使用 Node.js 26.12.0。
+
 内置 Blog 已使用 Meowtail Journal 的真实页面、条目和正文组件。Newsreader、Inter、JetBrains Mono 字体及许可证随静态产物本地发布；内容、地址、筛选和技能浏览功能保持不变。
 
 ### 语言
@@ -94,6 +96,10 @@ bun run check:workers
 | 推进开发任务、带目标工作并从工作基线到验收，兼容与测试投入按当前主导约束适配 | [agile-development](skills/agile-development/SKILL.md) |
 | 组织职责、依赖与整体结构 | [architecture](skills/architecture/SKILL.md) |
 | 设计 Agent 指导、面向 Agent 的视图或发展方法 | [agent-guidance](skills/agent-guidance/SKILL.md)、[skill-incubator](skills/skill-incubator/SKILL.md) |
+| 设计或评估 Agent 工作偏好与差异化视角 | [agent-personality](skills/agent-personality/SKILL.md) |
+| 审查保障机制的成本与必要性 | [assurance-review](skills/assurance-review/SKILL.md) |
+| 为概念、模块和接口选择名称 | [concept-naming](skills/concept-naming/SKILL.md) |
+| 比较机制的必要性或从长期维护角度评审设计 | [design-forge](skills/design-forge/SKILL.md)、[design-steward](skills/design-steward/SKILL.md) |
 | 分治协作 | [divide-and-conquer](skills/divide-and-conquer/SKILL.md) |
 | 制作产品演示或讲解视频 | [draft-video](skills/draft-video/SKILL.md) |
 | 设计测试、选择投入或接续复测 | [risk-driven-testing](skills/risk-driven-testing/SKILL.md) |
@@ -139,6 +145,8 @@ npx --yes skills@1.7.4 add lidessen/readme --skill interface-design -a codex --c
 ```
 
 该命令将技能完整复制到项目的 `.agents/skills/`，并在项目根目录记录 `skills-lock.json`。示例选择 Codex；使用其他 Agent 时，按 CLI 文档调整 `-a` 参数。将安装目录与锁文件一起纳入项目版本控制。
+
+这里的安装目录属于使用技能的项目；维护本仓库时，发布构建会按上述干净检出检查拒绝本仓库中的 `.agents/skills/`。
 
 ## 使用
 

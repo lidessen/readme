@@ -6,6 +6,7 @@
 - 增量核对：`3d50fd7` / 2026-11-24（视频技能全文及入口清单；本次重命名与索引改动除外，其他来源未重新核对）
 - 增量核对：`8670b1a` / 2026-11-25（draft-video 技能全文与候选探索条目；本次技能及索引改动除外，其他来源未重新核对）
 - 增量核对：`be52c00` / 2026-11-25（新增首页标题字体短文全文与 `notes/` 中文原文清单；其他来源未重新核对）
+- 增量核对：`627ea85` / 2026-11-25（Workcells 技能入口与 README 中的工具状态；其他来源未重新核对）
 - 维护：[principles-index](skills/principles-index/SKILL.md)（收录标准、状态口径与刷新流程见该技能）
 
 这是本仓库哲学、方法论与原则的检索工具（finding aid）。每条 = 主题、鉴别性搜索关键词、来源位置
@@ -25,8 +26,9 @@
 
 | 状态 | 覆盖 | 阅读方式 |
 | --- | --- | --- |
-| 当前技能 | `skills/*/SKILL.md` 入口 | 当前维护的指导，可直接使用 |
+| 当前技能 | 当前可用的 `skills/*/SKILL.md` 入口 | 当前维护的指导，可直接使用 |
 | 当前技能（参考） | 技能内被点名的方法 references | 按需加载的深化材料 |
+| 候选技能（工具暂停） | 依赖改造中、当前不可用工具的技能入口 | 可阅读方法，工具恢复并验证前暂不推荐安装或执行 |
 | 方法摘编 | `theory/` 两篇摘编 | 从形成资料整理，不是原始记录，不替代原文 |
 | 演进想法 | `theory/thoughts/` 与相关短想法 | 方法形成中的材料，不是已验证结论 |
 | 历史原文 | 旧仓固定提交迁入的三份文件 | 保留原始字节与历史表述，按历史地位阅读 |
@@ -107,7 +109,7 @@
 | 行为规格、执行投影与项目本地化 | YAML 用例、generate/localize | [risk-driven behavior-spec.md § 行为比执行表达更稳定](skills/risk-driven-testing/references/behavior-spec.md#行为比执行表达更稳定)、[execution-projection.md § 三种执行单元与组装](skills/risk-driven-testing/references/execution-projection.md#三种执行单元与组装)、[localize.md § 找到影响项目取舍的事实](skills/risk-driven-testing/references/localize.md#找到影响项目取舍的事实) | 当前技能（参考） |
 | 依赖升级：声明范围与锁定结果分开 | npm / Bun / Go | [skills/dependency-upgrade/SKILL.md § 找到真实检查范围](skills/dependency-upgrade/SKILL.md#找到真实检查范围) | 当前技能 |
 | Docker 中运行 Bun | 版本门禁、开发服务 | [skills/docker-bun/SKILL.md](skills/docker-bun/SKILL.md) | 当前技能 |
-| Workcells 开发闭环（工具仍在改造，暂不推荐安装） | Delegate / Task / Actions | [skills/workcells-development-loop/SKILL.md § 划界与委托](skills/workcells-development-loop/SKILL.md#划界与委托) | 当前技能 |
+| Workcells 开发闭环（工具仍在改造，暂不推荐安装） | Delegate / Task / Actions | [skills/workcells-development-loop/SKILL.md § 划界与委托](skills/workcells-development-loop/SKILL.md#划界与委托) | 候选技能（工具暂停） |
 | 工作流与信息流 | channel 模式、角色、信息流向、WorkCell | [notes/2026-11-13-232600-channel-mode-workflow.md](notes/2026-11-13-232600-channel-mode-workflow.md)、[blog/_03-agent-organization.md](blog/_03-agent-organization.md) | 短想法、草稿 |
 | 和 AI 做项目仍要亲自下场 | 掌控感、实践是试金石 | [notes/2026-11-13-232700-ai-project-participation.md](notes/2026-11-13-232700-ai-project-participation.md) | 短想法 |
 | 资源不足的计划 | 衣架、预案 | [notes/2026-11-13-232700-resource-shortage-planning.md](notes/2026-11-13-232700-resource-shortage-planning.md) | 短想法 |

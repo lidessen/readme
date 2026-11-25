@@ -1,6 +1,6 @@
 ---
 name: interface-design
-description: Design, refine, or critique Web, desktop GUI, and terminal TUI interfaces and interactions, judging visual craft and whether each screen, element, and flow serves a real task. Use for UI and interaction work; not code-only bug audits or system architecture review.
+description: 设计、改进或评审 Web、桌面 GUI 和终端 TUI 的界面与交互，判断视觉工艺以及页面、元素和流程是否服务真实任务。用于界面与交互工作，不用于仅审查代码缺陷或系统架构。
 metadata:
   lang: zh
 ---
@@ -84,7 +84,7 @@ metadata:
 
 Web、桌面 GUI 和 TUI（终端界面）的改动不能只依赖构建或逻辑单元测试：它们通过也可能出现标题裁切、侧栏换行或内容不可读。用真实内容和代表性状态检验实际渲染：
 
-- **Web / 桌面 GUI**：采集真实截图或检查正在运行的窗口，例如用 Playwright 或 `neowind`；修改后复看并走关键动作。
+- **Web / 桌面 GUI**：用浏览器自动化、截图或窗口检查工具观察实际渲染；例如检查标题是否裁切、侧栏是否换行。修改后复看并走关键动作。
 - **终端 TUI**：对 `View()` 等渲染输出在实际终端尺寸下做程序化快照与断言，例如 `80x24`、`120x36`。检查渲染总高度 `<= terminalHeight`，页头和页脚不被挤出屏幕；应为单行的列表行不发生别扭换行；结构化日志和数据解码为人可读内容，而非原样输出转义 JSON；在明暗主题下检查自适应对比度。计算宽度时考虑终端显示列宽与控制序列，而非只数字符。
 - 条件允许时，再用真实 PTY 或独立视觉检查复核终端画面与交互。分别说明自动断言、实际观察和未验证部分；快照通过不能代替视觉判断。
 

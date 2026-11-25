@@ -1,6 +1,6 @@
 ---
 name: defrag
-description: Consolidate stale, duplicated, or misplaced code, documentation, and references while preserving valid responsibilities and behavior. Use for cleanup and ownership repair; not deciding which Agent methods deserve separate skills, redefining architecture, or visual design critique.
+description: 整理过时、重复或归属不当的代码、文档和引用，保留有效职责与行为。用于清理和修复归属，不用于决定哪些 Agent 方法应独立成技能、重新定义架构或评判视觉设计。
 metadata:
   lang: zh
 ---
